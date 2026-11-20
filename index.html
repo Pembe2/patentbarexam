@@ -5,6 +5,58 @@
 <title>Patent Bar Study Hub</title>
 <style>
 :root{--bg:#f5f7fb;--nav:#0c1730;--ink:#18233a;--muted:#657189;--line:#e2e7f0;--blue:#356be8;--light:#eaf0ff;--green:#16805a;--gold:#ae6b18;--red:#bd4350;--white:#fff}*{box-sizing:border-box}body{margin:0;font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}button,input,textarea,select{font:inherit}button{cursor:pointer}.shell{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:100vh}.side{background:var(--nav);color:#b9c8e4;padding:29px 18px;position:sticky;top:0;height:100vh}.brand{color:white;display:flex;align-items:center;gap:12px;font-size:19px;font-weight:800;line-height:1.1;margin:0 8px 34px}.logo{background:#4f7ff3;padding:9px;border-radius:12px;font-size:23px}.tiny{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#7389b4;margin:26px 12px 10px}.nav{display:flex;align-items:center;gap:12px;width:100%;border:0;background:none;color:#b9c8e4;text-align:left;border-radius:10px;padding:12px 14px;margin:3px 0;font-weight:600}.nav:hover,.nav.active{background:#1c2d51;color:white}.nav.active{box-shadow:inset 3px 0 #6d96ff}.nav span{font-size:19px}.side-note{border:1px solid #324564;background:#172746;padding:14px;border-radius:12px;font-size:12px;line-height:1.6;margin:32px 5px 0}.side-note strong{color:white}.main{padding:37px clamp(18px,4.2vw,72px) 65px;max-width:1500px;width:100%;margin:auto}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:var(--blue)}h1{font-size:clamp(26px,3.2vw,38px);letter-spacing:-.035em;margin:8px 0 6px;line-height:1.18}h2{letter-spacing:-.025em;font-size:22px;margin:0 0 14px}h3{font-size:17px;margin:0 0 7px}.sub{color:var(--muted);margin:0 0 26px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);background:white;border-radius:17px;padding:22px;box-shadow:0 4px 20px #16284606}.metric{font-size:31px;font-weight:800;letter-spacing:-.04em;margin:4px 0}.muted{color:var(--muted)}.small{font-size:13px}.hero{background:linear-gradient(120deg,#172e63,#294f9d);color:#fff;border-radius:19px;padding:29px 32px;display:flex;align-items:center;justify-content:space-between;gap:15px;margin:25px 0}.hero p{max-width:520px;color:#cfdefb}.btn{border:0;border-radius:10px;padding:11px 18px;background:var(--blue);color:white;font-weight:750;display:inline-flex;align-items:center;gap:7px;text-decoration:none}.btn:hover{filter:brightness(.94)}.btn.secondary{color:#294a98;background:var(--light)}.btn.ghost{background:#fff;color:var(--blue);border:1px solid #cad6f2}.btn.negative{background:#fae8e9;color:#a43845}.btn:disabled{opacity:.45;cursor:not-allowed}.pill{font-size:12px;border-radius:99px;padding:4px 10px;background:#eef2f9;color:#50627f;font-weight:700}.tag{font-size:12px;color:var(--blue);font-weight:750}.bar{height:9px;background:#edf0f7;border-radius:99px;overflow:hidden;margin-top:12px}.bar>div{height:100%;background:linear-gradient(90deg,#4786f5,#39b89b);border-radius:99px;transition:width .2s}.section-title{display:flex;align-items:center;justify-content:space-between;margin:32px 0 15px;gap:12px}.modules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.module{background:white;border:1px solid var(--line);border-radius:15px;padding:19px;display:flex;flex-direction:column;gap:8px}.module p{margin:0;color:var(--muted);font-size:13px}.module-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px}.module h3{margin:0}.module-top{display:flex;justify-content:space-between;gap:10px}.chapter{font-weight:800;color:#6b86be;font-size:12px}.view{display:none}.view.active{display:block}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 24px}.select{background:white;border:1px solid #d6deed;border-radius:10px;padding:10px 13px;color:var(--ink);max-width:100%}.lesson{max-width:900px}.lesson p,.lesson li{line-height:1.75}.lesson .callout{background:#f2f6ff;border-left:4px solid var(--blue);padding:18px 20px;border-radius:9px;margin:20px 0}.question-head{display:flex;justify-content:space-between;align-items:center;gap:16px}.question{font-size:20px;line-height:1.45;font-weight:750;margin:22px 0}.choices{display:grid;gap:11px}.choice{background:white;border:1px solid #dce3ef;border-radius:11px;text-align:left;padding:14px 16px;display:flex;gap:12px;color:var(--ink)}.choice:hover:not(:disabled){border-color:var(--blue);background:#f7f9ff}.choice.chosen{border-color:var(--blue);background:#f0f5ff}.choice.correct{border-color:#45a77d;background:#effaf4}.choice.wrong{border-color:#d97780;background:#fff1f1}.choice b{color:#7b8ba6}.feedback{border-radius:12px;padding:17px 20px;margin:17px 0;background:#f3f6fb}.feedback.good{background:#edf9f1}.feedback.bad{background:#fff2f2}.flash{width:100%;min-height:220px;border:1px solid #c9d8ef;background:linear-gradient(145deg,#fff,#edf4ff);border-radius:20px;padding:25px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;cursor:pointer;box-shadow:0 5px 20px #1123420b}.flash .answer{font-size:20px;font-weight:750;max-width:560px}.flash .hint{font-size:13px;color:#6a7a94}.flash h2{font-size:25px;max-width:600px}.right{display:flex;justify-content:flex-end}.resource{display:block;color:#2156b7;text-decoration:none;font-weight:700;margin:12px 0}.resource:hover{text-decoration:underline}.footer{margin-top:40px;padding-top:19px;border-top:1px solid var(--line);font-size:12px;color:#78849b}.stat-pair{display:flex;justify-content:space-between;gap:12px;margin-top:10px}.planner-row{display:flex;gap:10px;align-items:center;margin:10px 0}.planner-row input{width:18px;height:18px;accent-color:#356be8}.notes{width:100%;min-height:160px;resize:vertical;border:1px solid #d6deed;border-radius:11px;padding:14px;line-height:1.6}.flex{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.split{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.hidden{display:none!important}.counter{font-weight:800;color:#3358a0}.divider{border-top:1px solid var(--line);margin:20px 0}.focus{font-weight:700;color:#2b4fa1}.warning{background:#fff7eb;border:1px solid #f1dcb7;padding:15px;border-radius:11px;color:#855921}.kicker{color:#6b7892;font-size:13px}.status{color:var(--green);font-weight:750}.empty{padding:30px 20px;text-align:center;color:var(--muted)}@media(max-width:950px){.shell{grid-template-columns:1fr}.side{height:auto;position:static;padding:14px 15px}.brand{margin:0 0 12px;font-size:17px}.tiny,.side-note{display:none}.nav-wrap{display:flex;gap:6px;overflow-x:auto}.nav{white-space:nowrap;width:auto;padding:9px 11px;font-size:12px}.nav span{display:none}.main{padding:25px 18px 45px}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.grid,.modules,.split{grid-template-columns:1fr}.hero{flex-direction:column;align-items:flex-start;padding:23px}.card{padding:18px}.section-title{align-items:flex-start;flex-direction:column}.question{font-size:18px}}
+
+/* iPhone portrait and small-screen layout */
+html{overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{min-width:0;overflow-x:hidden}
+.shell,.main,.view,.card,.module,.hero,.split,.grid,.modules{min-width:0}
+h1,h2,h3,p,.question,.choice,.feedback,.resource,.lesson{overflow-wrap:anywhere}
+button,a,select{touch-action:manipulation}
+@media(max-width:650px){
+  .shell{display:block;min-height:100dvh}
+  .side{padding:calc(12px + env(safe-area-inset-top,0px)) 12px 11px;position:relative;width:100%;height:auto}
+  .brand{margin:0 0 13px 3px;font-size:15px;line-height:1.15;gap:9px}
+  .logo{padding:6px 9px;font-size:20px;border-radius:9px}
+  .nav-wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;overflow:visible;width:100%}
+  .nav{width:100%;min-width:0;margin:0;padding:10px 5px;min-height:43px;display:flex;justify-content:center;text-align:center;white-space:normal;font-size:12px;line-height:1.2;border:1px solid #34466a;border-radius:9px}
+  .nav.active{box-shadow:inset 0 -3px #6d96ff;background:#263b66}
+  .main{width:100%;max-width:100%;padding:22px 14px calc(38px + env(safe-area-inset-bottom,0px))}
+  h1{font-size:clamp(25px,7vw,33px);line-height:1.16}
+  h2{font-size:20px}
+  .sub{margin-bottom:18px}
+  .grid,.modules,.split{grid-template-columns:minmax(0,1fr);gap:12px}
+  .card{padding:17px 15px;border-radius:14px}
+  .module{padding:16px}
+  .metric{font-size:29px}
+  .hero{margin:18px 0 22px;padding:20px 17px;gap:12px}
+  .hero h2{font-size:23px!important}
+  .hero .btn{white-space:normal!important}
+  .section-title{gap:10px;margin:25px 0 12px}
+  .section-title .btn{max-width:100%}
+  .module-top,.module-foot,.question-head,.stat-pair{flex-wrap:wrap}
+  .module-foot{gap:10px}
+  .toolbar{align-items:stretch;gap:10px}
+  .toolbar label{display:flex;flex-direction:column;gap:5px;min-width:0;flex:1 1 135px}
+  .toolbar .select{width:100%;min-height:44px}
+  .btn,.choice{min-height:44px}
+  .choice{width:100%;padding:13px 12px;font-size:15px;line-height:1.4}
+  .choice b{flex:0 0 auto}
+  .question{font-size:18px;margin:17px 0}
+  .feedback{padding:14px 13px}
+  .flash{padding:22px 14px;min-height:200px}
+  .flash h2{font-size:21px}
+  .flash .answer{font-size:17px}
+  .resource{line-height:1.5}
+  .lesson .toolbar .btn{justify-content:center}
+  .planner-row{align-items:flex-start}
+  .planner-row input{flex:0 0 18px;margin-top:4px}
+  input,select,textarea{font-size:16px}
+}
+@media(max-width:360px){
+  .nav{font-size:11px;padding:8px 3px}
+  .main{padding-left:11px;padding-right:11px}
+  .card{padding:15px 12px}
+}
 </style>
 </head>
 <body><div class="shell"><aside class="side"><div class="brand"><span class="logo">§</span><span>PATENT BAR<br>STUDY HUB</span></div><div class="tiny">Workspace</div><div class="nav-wrap"><button class="nav active" data-view="dashboard"><span>▦</span>Dashboard</button><button class="nav" data-view="learn"><span>▤</span>Study modules</button><button class="nav" data-view="practice"><span>✎</span>Practice questions</button><button class="nav" data-view="flashcards"><span>▣</span>Flashcards</button><button class="nav" data-view="planner"><span>◷</span>Study plan</button><button class="nav" data-view="resources"><span>↗</span>Resources</button></div><div class="side-note"><strong>Built around official sources</strong><br>USPTO registration exam updated September 23, 2026.<br>Primary reference: MPEP 9th Ed., Rev. 01.2024.</div></aside><main class="main">
