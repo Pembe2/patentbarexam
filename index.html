@@ -250,6 +250,17 @@ body.daily-modal-open{overflow:hidden}
 .syllabus-sources p{margin:12px 0}
 .syllabus-sources small{display:block;color:#6b7890;margin-top:3px}
 @media(max-width:750px){.syllabus-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.syllabus-metrics>div{padding:12px}.syllabus-item summary{align-items:flex-start;flex-wrap:wrap;gap:8px}.syllabus-status{white-space:normal}.syllabus-chapter-heading{padding:13px 14px}.syllabus-controls{padding:14px 12px}}
+
+/* Completed versus planned daily lessons */
+.daily-future-roadmap{margin-top:24px;border:1px solid #dce4f0;border-radius:13px;background:#fff;padding:14px}
+.daily-future-roadmap summary{font-weight:800;color:#254e91;cursor:pointer;padding:5px 0;line-height:1.5}
+.daily-future-roadmap>.daily-lesson-list{margin-top:14px}
+.daily-planned-item{background:#f7f9fc;border-style:dashed;cursor:default;opacity:.78}
+.daily-planned-item:hover{background:#f7f9fc;border-color:#dbe2ed}
+.daily-plan-pill{color:#6d7787;font-size:11px;font-weight:750;border:1px solid #cfd7e4;border-radius:99px;padding:4px 7px}
+.syllabus-metrics{grid-template-columns:repeat(5,minmax(0,1fr))}
+.syllabus-status.planned{background:#edf2fd;border-color:#d5e0f6;color:#3f5a92}
+@media(max-width:750px){.syllabus-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.daily-future-roadmap{padding:11px}}
 </style>
 </head>
 <body><div class="shell"><aside class="side"><div class="brand"><span class="logo">§</span><span>PATENT BAR<br>STUDY HUB</span></div><div class="tiny">Workspace</div><div class="nav-wrap"><button class="nav active" data-view="dashboard"><span>▦</span>Dashboard</button><button class="nav" data-view="learn"><span>▤</span>Reference Library</button><button class="nav" data-view="practice"><span>✎</span>Practice questions</button><button class="nav" data-view="flashcards"><span>▣</span>Flashcards</button><button class="nav" data-view="planner"><span>◷</span>Study plan</button><button class="nav" data-view="resources"><span>↗</span>Resources</button></div><div class="side-note"><strong>Built around official sources</strong><br>USPTO registration exam updated September 23, 2026.<br>Primary reference: MPEP 9th Ed., Rev. 01.2024.</div></aside><main class="main">
