@@ -21,6 +21,34 @@ view.innerHTML='<div class="eyebrow">Your daily learning path</div><h1>Ten minut
 main.insertBefore(view,main.querySelector('.footer'));
 button.addEventListener('click',()=>openDaily());
 let selected=null,phase=0,questionIndex=0,correctCount=0,answered=false;
+
+const glossary=new Map();
+lessons.forEach(lesson=>(lesson.vocabulary||[]).forEach(entry=>{
+ const key=entry.term.toLowerCase();if(!glossary.has(key))glossary.set(key,{...entry,firstDay:lesson.day});
+}));
+function lookupTerm(term){return glossary.get(String(term).toLowerCase())}
+function glossaryItem(entry,mini=false){
+ return '<div class="daily-vocab-item'+(mini?' daily-vocab-mini':'')+'"><strong>'+safe(entry.term)+'</strong><p>'+safe(entry.meaning)+'</p></div>';
+}
+function vocabDisplay(l){
+ const words=l.vocabulary||[];
+ const previous=(l.reviewTerms||[]).map(lookupTerm).filter(Boolean);
+ return '<section class="daily-vocabulary"><h3>New words for today</h3>'+
+ '<p class="small muted">Learn these first. We’ll use them in the lesson and bring them back later.</p>'+
+ '<div class="daily-vocab-grid">'+words.map(word=>glossaryItem(word)).join('')+'</div>'+
+ (previous.length?'<details class="daily-vocab-review" open><summary>Quick review of earlier words</summary>'+
+ '<div class="daily-vocab-grid">'+previous.map(word=>glossaryItem(word,true)).join('')+'</div></details>':'')+
+ '</section>';
+}
+function quizWords(q){
+ const text=(q.q+' '+q.choices.join(' ')).toLowerCase();
+ const matched=Array.from(glossary.values()).filter(x=>text.includes(x.term.toLowerCase()));
+ const selected=matched.sort((a,b)=>a.firstDay-b.firstDay).slice(0,9);
+ return selected.length?'<details class="daily-quiz-glossary"><summary>Unfamiliar wording? Tap for definitions</summary>'+
+ '<p class="small muted">These definitions may give you clues. That’s fine for learning practice; timed exam mode hides them.</p>'+
+ selected.map(x=>glossaryItem(x,true)).join('')+'</details>':'';
+}
+
 function goDaily(){showView('daily');window.scrollTo(0,0)}
 function renderBanner(){
  const d=stored(),l=current(),complete=doneCount(),finishedToday=d.lastCompletedDate===localDay();
@@ -58,7 +86,7 @@ function renderStep(){
  const top=heading(l,'About 10 minutes · '+steps[n]+' · Step '+(n+1)+' of 4')+
  '<div class="daily-steps">'+steps.map((x,i)=>'<span class="'+(i===n?'active':i<n?'done':'')+'">'+(i+1)+'. '+x+'</span>').join('')+'</div>';
  let content='';
- if(phase===0)content='<div class="daily-reading"><div class="daily-term">Legal vocabulary: <strong>'+safe(l.term)+'</strong></div><p class="daily-def">'+safe(l.definition)+'</p>'+l.plain.map((p)=>'<p>'+safe(p)+'</p>').join('')+'<div class="daily-note"><strong>Remember:</strong> '+safe(l.recap)+'</div></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">All lessons</button><button class="btn" id="dailyContinue">See the engineering example →</button></div>';
+ if(phase===0)content='<div class="daily-reading">'+vocabDisplay(l)+'<h3>Now put those words together</h3><p class="daily-def">'+safe(l.definition)+'</p>'+l.plain.map((p)=>'<p>'+safe(p)+'</p>').join('')+'<div class="daily-note"><strong>Remember:</strong> '+safe(l.recap)+'</div></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">All lessons</button><button class="btn" id="dailyContinue">See the engineering example →</button></div>';
  if(phase===1)content='<div class="daily-reading"><h3>Engineering example</h3><p class="daily-def">'+safe(l.example)+'</p><div class="daily-note"><strong>Common exam trap:</strong> '+safe(l.trap)+'</div><p>Now apply the idea to three questions. When you answer, you’ll see why each choice is right or wrong, plus an explanation.</p></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">← Back</button><button class="btn" id="dailyContinue">Try 3 questions →</button></div>';
  if(phase===2)content='<div id="dailyQuestion"></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">← Back</button><button class="btn hidden" id="dailyContinue">Next →</button></div>';
  if(phase===3)content='<div class="daily-reading"><h3>Today’s takeaway</h3><p class="daily-def">'+safe(l.recap)+'</p><div class="daily-note"><strong>Exam trap:</strong> '+safe(l.trap)+'</div><p><strong>Your practice:</strong> '+correctCount+' of '+l.ids.length+' correct. Getting questions wrong is part of learning—those answers were added to your existing review history.</p><p class="small muted">Reference to explore: '+safe(l.refs)+'. Confirm detailed rules and exceptions in the official MPEP.</p><a class="resource" target="_blank" rel="noopener" href="https://www.uspto.gov/web/offices/pac/mpep/index.html">Open USPTO MPEP ↗</a></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">← Back</button><button class="btn" id="dailyFinish">Mark lesson complete ✓</button></div>';
@@ -85,7 +113,7 @@ function renderQuestion(){
  if(!q){container.textContent='This question could not be loaded. You can return to the lesson list.';return}
  const letters='ABCDE';
  container.innerHTML='<div class="daily-question-head"><span class="pill">Question '+(questionIndex+1)+' / '+l.ids.length+'</span><span class="small muted">MPEP: '+safe(q.ref)+'</span></div>'+
- '<h3 class="daily-question-text">'+safe(q.q)+'</h3><div class="daily-answer-list">'+q.choices.map((a,i)=>'<button class="choice daily-answer" data-answer="'+i+'"><b>'+letters[i]+'.</b><span>'+safe(a)+'</span></button>').join('')+'</div><div id="dailyFeedback"></div>';
+ '<h3 class="daily-question-text">'+safe(q.q)+'</h3>'+quizWords(q)+'<div class="daily-answer-list">'+q.choices.map((a,i)=>'<button class="choice daily-answer" data-answer="'+i+'"><b>'+letters[i]+'.</b><span>'+safe(a)+'</span></button>').join('')+'</div><div id="dailyFeedback"></div>';
  container.querySelectorAll('[data-answer]').forEach(x=>x.addEventListener('click',()=>submit(Number(x.dataset.answer))));
 }
 function submit(i){
