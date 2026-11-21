@@ -85,6 +85,15 @@ button,a,select{touch-action:manipulation}
 .deep-lesson .btn{margin-top:5px}
 .learn-toggle{display:inline-flex;white-space:normal;text-align:left;min-height:44px}
 @media(max-width:650px){.deep-lesson{padding:14px 12px}.deep-lesson h3{font-size:17px}.learn-toggle{width:100%;justify-content:center}.deep-lesson .btn{max-width:100%}}
+
+.choice-breakdown{margin:18px 0;padding-top:12px;border-top:1px solid #dae3ef}
+.choice-breakdown h4{font-size:16px;margin:0 0 9px;color:#243e74}
+.choice-rationale{background:#f6f8fc;border:1px solid #e2e9f3;padding:12px 14px;border-radius:10px;margin:9px 0}
+.choice-rationale.is-right{background:#edf9f1;border-color:#a8daba}
+.choice-rationale.is-chosen:not(.is-right){background:#fff2f2;border-color:#edc2c2}
+.choice-rationale strong{font-size:14px;line-height:1.5}
+.choice-rationale p{font-size:14px;line-height:1.55;margin:6px 0 0}
+@media(max-width:650px){.choice-rationale{padding:11px 10px}}
 </style>
 </head>
 <body><div class="shell"><aside class="side"><div class="brand"><span class="logo">§</span><span>PATENT BAR<br>STUDY HUB</span></div><div class="tiny">Workspace</div><div class="nav-wrap"><button class="nav active" data-view="dashboard"><span>▦</span>Dashboard</button><button class="nav" data-view="learn"><span>▤</span>Study modules</button><button class="nav" data-view="practice"><span>✎</span>Practice questions</button><button class="nav" data-view="flashcards"><span>▣</span>Flashcards</button><button class="nav" data-view="planner"><span>◷</span>Study plan</button><button class="nav" data-view="resources"><span>↗</span>Resources</button></div><div class="side-note"><strong>Built around official sources</strong><br>USPTO registration exam updated September 23, 2026.<br>Primary reference: MPEP 9th Ed., Rev. 01.2024.</div></aside><main class="main">
@@ -168,4 +177,4 @@ function exportData(){let blob=new Blob([JSON.stringify({app:'patent-bar-study-h
 function importData(event){let f=event.target.files[0];if(!f)return;let reader=new FileReader();reader.onload=()=>{try{let x=JSON.parse(reader.result);if(x.app!=='patent-bar-study-hub'||!x.data||typeof x.data!=='object')throw Error();if(!confirm('Replace current progress with this backup?'))return;progress={completed:{},attempts:[],mastered:{},weeks:{},notes:'',...x.data};save();init();alert('Progress restored.')}catch(e){alert('Could not read a valid study hub backup.')}};reader.readAsText(f);event.target.value=''}
 function init(){let topicOptions='<option value="all">All topics</option>'+modules.map(m=>`<option value="${m.id}">${m.title}</option>`).join('');document.getElementById('quizTopic').innerHTML=topicOptions;document.getElementById('cardTopic').innerHTML=topicOptions;document.getElementById('notes').value=progress.notes||'';renderModules();updateMetrics();renderWeeks();resetCards()}
 document.getElementById('notes').addEventListener('input',e=>{progress.notes=e.target.value;save()});init();
-</script><script src="questions-extra.js"></script><script src="smart-study.js"></script><script src="answer-lessons.js"></script></body></html>
+</script><script src="questions-extra.js"></script><script src="smart-study.js"></script><script src="feedback-original.js"></script><script src="feedback-21-45.js"></script><script src="feedback-46-70.js"></script><script src="answer-lessons.js"></script></body></html>
