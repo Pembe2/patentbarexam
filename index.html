@@ -57,6 +57,23 @@ button,a,select{touch-action:manipulation}
   .main{padding-left:11px;padding-right:11px}
   .card{padding:15px 12px}
 }
+
+/* Smart question dashboard */
+.smart-panel{margin-top:16px}
+.smart-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.smart-kpi{padding:13px 10px;border-radius:11px;background:#f3f6fb;display:flex;flex-direction:column;gap:3px}
+.smart-kpi strong{font-size:25px;line-height:1.1;color:#213d78}
+.smart-kpi span{font-size:12px;color:#536580}
+.smart-history-row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #e9edf4}
+.smart-history-text{flex:1;min-width:0;font-size:13px;overflow-wrap:anywhere}
+.smart-status{font-size:11px;font-weight:750;padding:4px 8px;border-radius:20px;white-space:nowrap;background:#eef1f7;color:#3f5272}
+.smart-status.review{background:#fff0e7;color:#9b4f1a}
+.smart-status.mastered{background:#e6f6ed;color:#16704c}
+.smart-status.unseen{background:#eaf0ff;color:#3156a4}
+#practiceMode{max-width:100%}
+#smartQuestionStatus{padding-top:8px}
+#smartAfterAnswer{margin:9px 0}
+@media(max-width:650px){.smart-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.smart-history-row{flex-wrap:wrap}.smart-history-text{flex-basis:65%}.smart-kpi strong{font-size:23px}}
 </style>
 </head>
 <body><div class="shell"><aside class="side"><div class="brand"><span class="logo">§</span><span>PATENT BAR<br>STUDY HUB</span></div><div class="tiny">Workspace</div><div class="nav-wrap"><button class="nav active" data-view="dashboard"><span>▦</span>Dashboard</button><button class="nav" data-view="learn"><span>▤</span>Study modules</button><button class="nav" data-view="practice"><span>✎</span>Practice questions</button><button class="nav" data-view="flashcards"><span>▣</span>Flashcards</button><button class="nav" data-view="planner"><span>◷</span>Study plan</button><button class="nav" data-view="resources"><span>↗</span>Resources</button></div><div class="side-note"><strong>Built around official sources</strong><br>USPTO registration exam updated September 23, 2026.<br>Primary reference: MPEP 9th Ed., Rev. 01.2024.</div></aside><main class="main">
@@ -140,4 +157,4 @@ function exportData(){let blob=new Blob([JSON.stringify({app:'patent-bar-study-h
 function importData(event){let f=event.target.files[0];if(!f)return;let reader=new FileReader();reader.onload=()=>{try{let x=JSON.parse(reader.result);if(x.app!=='patent-bar-study-hub'||!x.data||typeof x.data!=='object')throw Error();if(!confirm('Replace current progress with this backup?'))return;progress={completed:{},attempts:[],mastered:{},weeks:{},notes:'',...x.data};save();init();alert('Progress restored.')}catch(e){alert('Could not read a valid study hub backup.')}};reader.readAsText(f);event.target.value=''}
 function init(){let topicOptions='<option value="all">All topics</option>'+modules.map(m=>`<option value="${m.id}">${m.title}</option>`).join('');document.getElementById('quizTopic').innerHTML=topicOptions;document.getElementById('cardTopic').innerHTML=topicOptions;document.getElementById('notes').value=progress.notes||'';renderModules();updateMetrics();renderWeeks();resetCards()}
 document.getElementById('notes').addEventListener('input',e=>{progress.notes=e.target.value;save()});init();
-</script><script src="questions-extra.js"></script></body></html>
+</script><script src="questions-extra.js"></script><script src="smart-study.js"></script></body></html>
