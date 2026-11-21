@@ -38,6 +38,25 @@ function paragraph(target,label,value){
  const strong=el('strong','',label+' ');
  p.append(strong,document.createTextNode(value));target.append(p);
 }
+function getChoiceRationale(q,index){
+ if(index===q.correct)return q.why;
+ const sources=[window.PATENT_FEEDBACK_ORIGINAL,window.PATENT_FEEDBACK_21_45,window.PATENT_FEEDBACK_46_70];
+ const list=sources.reduce((found,source)=>found||(source&&source[String(q.id)]),null);
+ if(!list)return 'Compare this option with the specific patent-law rule explained below.';
+ const wrongIndex=Array.from({length:q.choices.length},(_,i)=>i).filter(i=>i!==q.correct).indexOf(index);
+ return list[wrongIndex]||'Compare this option with the specific patent-law rule explained below.';
+}
+function choicesBreakdown(q,selected){
+ const section=el('div','choice-breakdown');
+ section.append(el('h4','','Why each option is right or wrong'));
+ q.choices.forEach((choice,i)=>{
+  const item=el('div','choice-rationale'+(i===q.correct?' is-right':'')+(i===selected?' is-chosen':''));
+  const label=el('strong','',String.fromCharCode(65+i)+'. '+choice+(i===q.correct?' — Correct answer':i===selected?' — Your answer':''));
+  const reason=el('p','',getChoiceRationale(q,i));
+  item.append(label,reason);section.append(item);
+ });
+ return section;
+}
 function makeLesson(q,selected,wasCorrect){
  const info=guides[q.topic]||guides.roadmap;
  const container=el('div','deep-lesson');
@@ -45,10 +64,11 @@ function makeLesson(q,selected,wasCorrect){
  if(!wasCorrect){
   paragraph(container,'You chose:',q.choices[selected]);
   paragraph(container,'Correct answer:',q.choices[q.correct]);
-  paragraph(container,'Why your answer does not fit:', 'The selected alternative does not satisfy the rule being tested. '+q.why+' Compare what your choice claims against the controlling requirement below.');
+  paragraph(container,'Why your answer does not fit:', getChoiceRationale(q,selected));
  } else {
   paragraph(container,'Why the correct answer works:',q.why);
  }
+ container.append(choicesBreakdown(q,selected));
  const matches=targetedRules.filter(([re])=>re.test(q.q));
  if(matches.length){
   paragraph(container,'This question’s key distinction:',matches[0][1]);
