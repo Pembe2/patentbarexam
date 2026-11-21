@@ -26,15 +26,15 @@ function audit(item){
  const qs=item.questionIds.map(questionFor).filter(Boolean);
  const reference=!!item.referenceTopic;
  // Listed sources and broad reference chapters are only pointers; neither proves exam readiness.
- return {lessons:ls,questions:qs,reference,
-  state:ls.length?'introduced':(qs.length||reference)?'partial':'missing'};
+ return {lessons:ls,questions:qs,reference,planned:item.plannedDays||[],
+  state:ls.length?'introduced':(item.plannedDays||[]).length?'planned':(qs.length||reference)?'partial':'missing'};
 }
 function levels(){
- const counts={introduced:0,partial:0,missing:0};
+ const counts={introduced:0,planned:0,partial:0,missing:0};
  syllabus.items.forEach(item=>counts[audit(item).state]++);
  return counts;
 }
-function statusLabel(state){return state==='introduced'?'Daily lesson exists':state==='partial'?'Intro/question only':'Not yet developed'}
+function statusLabel(state){return state==='introduced'?'Daily lesson exists':state==='planned'?'Planned, not published':state==='partial'?'Intro/question only':'Not yet developed'}
 function topicText(item){return [item.title,item.chapter,item.chapterTitle,item.reference,item.referenceTopic||''].join(' ').toLowerCase()}
 function results(){
  const list=syllabus.items.filter(item=>{
@@ -48,6 +48,7 @@ function results(){
 function linkHTML(item,a){
  const parts=[];
  a.lessons.forEach(l=>parts.push('<button type="button" class="syllabus-link" data-lesson="'+l.day+'">Daily lesson '+l.day+': '+escapeHTML(l.title)+'</button>'));
+ if(a.planned.length)parts.push('<span class="small muted">Planned lessons (not available yet): Days '+escapeHTML(a.planned.join(', '))+'</span>');
  if(item.referenceTopic)parts.push('<button type="button" class="syllabus-link" data-topic="'+escapeHTML(item.referenceTopic)+'">Reference Library: '+escapeHTML(item.referenceTopic)+'</button>');
  if(a.questions.length)parts.push('<span class="small muted">Draft question IDs: '+escapeHTML(a.questions.map(x=>String(x.id)).join(', '))+' (not individually source-verified)</span>');
  return parts.length?'<div class="syllabus-links">'+parts.join('')+'</div>':'<p class="small muted">No dedicated lessons, reference topic, or mapped practice questions yet.</p>';
@@ -76,13 +77,14 @@ function render(){
  app.innerHTML='<div class="syllabus-disclaimer">This is a <strong>curriculum inventory</strong>, not an official USPTO exam blueprint or predicted topic weighting. Even a linked lesson is only introductory coverage. All existing practice questions require individual legal quality review.</div>'+
  '<div class="syllabus-metrics">'+
  '<div><strong>'+syllabus.items.length+'</strong><span>Mapped learning objectives</span></div>'+
- '<div><strong>'+c.introduced+'</strong><span>Daily lesson introduced</span></div>'+
+ '<div><strong>'+c.introduced+'</strong><span>Daily lesson introduced</span></div>'+ 
+ '<div><strong>'+c.planned+'</strong><span>Future lesson planned</span></div>'+ 
  '<div><strong>'+c.partial+'</strong><span>Reference / question only</span></div>'+
  '<div><strong>'+c.missing+'</strong><span>Not yet developed</span></div></div>'+
  '<div class="syllabus-controls"><label for="syllabusSearch">Find a requirement</label>'+
  '<input id="syllabusSearch" type="search" placeholder="Try: assignments, priority, deadlines, PCT…" value="'+escapeHTML(search)+'" autocomplete="off">'+
  '<div class="syllabus-filter-buttons">'+[
- ['all','All'],['missing','Not developed'],['partial','Intro/question only'],['introduced','Daily lesson']
+ ['all','All'],['missing','Not developed'],['planned','Future lesson planned'],['partial','Intro/question only'],['introduced','Daily lesson']
  ].map(([k,v])=>'<button type="button" class="btn secondary syllabus-filter '+(filter===k?'selected':'')+'" data-filter="'+k+'">'+v+'</button>').join('')+'</div>'+
  '<label for="syllabusSource">Source chapter</label><select id="syllabusSource"><option value="all">All 29 MPEP chapters + 3 other sources</option>'+
  options.map(([code,name])=>'<option value="'+escapeHTML(code)+'"'+(source===code?' selected':'')+'>'+escapeHTML(chapterName(code)+' — '+name)+'</option>').join('')+'</select>'+
