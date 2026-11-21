@@ -1,4 +1,4 @@
-/* New foundational practice questions for daily lessons 16–30. IDs stable for saved progress. */
+/* Daily lessons 16–30: original questions with option-specific teaching feedback. */
 (function(){const added=[
   {
     "id": "PB-D016-1",
@@ -12,7 +12,13 @@
     ],
     "correct": 1,
     "why": "Inventorship follows a qualifying contribution to conception of what the claims cover.",
-    "ref": "MPEP 2109"
+    "ref": "MPEP 2109",
+    "choiceWhy": [
+      "Funding does not make someone an inventor without conception.",
+      "Inventorship follows a qualifying contribution to conception of what the claims cover.",
+      "A company may own rights but cannot literally conceive an invention.",
+      "Reviewing finished drawings alone does not show inventive conception."
+    ]
   },
   {
     "id": "PB-D016-2",
@@ -26,7 +32,13 @@
     ],
     "correct": 2,
     "why": "Routine reduction to practice without inventive conception alone does not make someone a joint inventor.",
-    "ref": "MPEP 2109"
+    "ref": "MPEP 2109",
+    "choiceWhy": [
+      "Making a prototype does not always establish inventive conception.",
+      "Physical effort and creative conception are different.",
+      "Routine reduction to practice without inventive conception alone does not make someone a joint inventor.",
+      "Technicians can be inventors if they actually contribute to the claimed conception."
+    ]
   },
   {
     "id": "PB-D016-3",
@@ -40,7 +52,13 @@
     ],
     "correct": 0,
     "why": "The inventive contributions relevant to the remaining or amended claims may differ from those relevant earlier.",
-    "ref": "MPEP 2109"
+    "ref": "MPEP 2109",
+    "choiceWhy": [
+      "The inventive contributions relevant to the remaining or amended claims may differ from those relevant earlier.",
+      "Changing claims does not automatically change employers.",
+      "Joint inventorship can arise when more than one person contributes to claimed subject matter.",
+      "Signing or drafting figures alone doesn't control inventorship."
+    ]
   },
   {
     "id": "PB-D017-1",
@@ -54,7 +72,13 @@
     ],
     "correct": 2,
     "why": "Joint inventors need not make contributions of the same type or amount.",
-    "ref": "MPEP 2109; 35 U.S.C. §116"
+    "ref": "MPEP 2109; 35 U.S.C. §116",
+    "choiceWhy": [
+      "Joint inventorship does not require equal percentages of creative work.",
+      "Physical presence in one workspace isn't required.",
+      "Joint inventors need not make contributions of the same type or amount.",
+      "Patent law allows joint inventors when both make qualifying contributions."
+    ]
   },
   {
     "id": "PB-D017-2",
@@ -68,7 +92,13 @@
     ],
     "correct": 3,
     "why": "Providing supervision or funding without an inventive contribution does not itself establish inventorship.",
-    "ref": "MPEP 2109"
+    "ref": "MPEP 2109",
+    "choiceWhy": [
+      "Conceiving a claimed feature is evidence of inventorship.",
+      "Conceiving a claimed mechanism can establish inventorship.",
+      "Conceiving a claimed combination can establish inventorship.",
+      "Providing supervision or funding without an inventive contribution does not itself establish inventorship."
+    ]
   },
   {
     "id": "PB-D017-3",
@@ -82,7 +112,13 @@
     ],
     "correct": 0,
     "why": "Section 116 allows joint invention even if inventors did not physically work together or at the same time.",
-    "ref": "35 U.S.C. §116"
+    "ref": "35 U.S.C. §116",
+    "choiceWhy": [
+      "Section 116 allows joint invention even if inventors did not physically work together or at the same time.",
+      "Joint inventors do not need a shared work location.",
+      "There is no requirement that both sign simultaneously.",
+      "Contributing to every claim is not required for joint inventorship."
+    ]
   },
   {
     "id": "PB-D018-1",
@@ -96,7 +132,13 @@
     ],
     "correct": 2,
     "why": "Assignment can transfer rights, not the historical fact of conception.",
-    "ref": "MPEP 301"
+    "ref": "MPEP 301",
+    "choiceWhy": [
+      "Ownership transfers do not retroactively make the owner the inventor.",
+      "The designer's inventorship is not erased by assigning rights.",
+      "Assignment can transfer rights, not the historical fact of conception.",
+      "Assignment doesn't cause an immediate patent grant."
+    ]
   },
   {
     "id": "PB-D018-2",
@@ -110,7 +152,13 @@
     ],
     "correct": 1,
     "why": "An assignee receives the transferred rights specified by an assignment.",
-    "ref": "MPEP 301"
+    "ref": "MPEP 301",
+    "choiceWhy": [
+      "The examiner reviews the application and doesn't receive the assigned rights.",
+      "An assignee receives the transferred rights specified by an assignment.",
+      "Assignees need not have invented the subject matter.",
+      "A prior-art reference is evidence, not a rights recipient."
+    ]
   },
   {
     "id": "PB-D018-3",
@@ -124,7 +172,13 @@
     ],
     "correct": 1,
     "why": "U.S. law permits certain assignees and other qualifying parties to apply; the actual inventors must still be correctly identified.",
-    "ref": "35 U.S.C. §118; 37 CFR 1.46"
+    "ref": "35 U.S.C. §118; 37 CFR 1.46",
+    "choiceWhy": [
+      "Certain assignees may qualify as applicants under the rules.",
+      "U.S. law permits certain assignees and other qualifying parties to apply; the actual inventors must still be correctly identified.",
+      "An assignee need not personally invent every feature.",
+      "Assignee applicant status isn't tied to patent expiration."
+    ]
   },
   {
     "id": "PB-D019-1",
@@ -138,7 +192,13 @@
     ],
     "correct": 0,
     "why": "Assignment is the transfer instrument; USPTO recordation documents it in the record.",
-    "ref": "35 U.S.C. §261"
+    "ref": "35 U.S.C. §261",
+    "choiceWhy": [
+      "Assignment is the transfer instrument; USPTO recordation documents it in the record.",
+      "Opening a browser window doesn't execute a transfer.",
+      "Maintenance fees help keep some issued patents in force; they don't transfer title.",
+      "Changing an abstract is not an assignment."
+    ]
   },
   {
     "id": "PB-D019-2",
@@ -152,7 +212,13 @@
     ],
     "correct": 1,
     "why": "Recordation makes the transaction part of the public ownership records and may affect priority between interests.",
-    "ref": "MPEP 301–325"
+    "ref": "MPEP 301–325",
+    "choiceWhy": [
+      "Recording rights does not change the patent type.",
+      "Recordation makes the transaction part of the public ownership records and may affect priority between interests.",
+      "Inventorship is not erased by recording an assignment.",
+      "Recordation isn't a substantive guarantee of patentability."
+    ]
   },
   {
     "id": "PB-D019-3",
@@ -166,7 +232,13 @@
     ],
     "correct": 2,
     "why": "Recordation is not a universal adjudication of the enforceability or legal effect of the recorded instrument.",
-    "ref": "MPEP 301–325"
+    "ref": "MPEP 301–325",
+    "choiceWhy": [
+      "Recordation doesn't always resolve legal disputes about title.",
+      "An assignment record doesn't change who actually conceived the invention.",
+      "Recordation is not a universal adjudication of the enforceability or legal effect of the recorded instrument.",
+      "A valid ownership transfer normally requires an appropriate legal act, not just a record entry."
+    ]
   },
   {
     "id": "PB-D020-1",
@@ -180,7 +252,13 @@
     ],
     "correct": 1,
     "why": "A juristic entity generally acts in patent prosecution through a registered patent practitioner.",
-    "ref": "MPEP 403; 37 CFR 1.31"
+    "ref": "MPEP 403; 37 CFR 1.31",
+    "choiceWhy": [
+      "Ordinary corporate employees aren't automatically authorized to represent the company.",
+      "A juristic entity generally acts in patent prosecution through a registered patent practitioner.",
+      "Technical expertise doesn't confer patent-practitioner status.",
+      "Sales staff don't receive patent-practice authority from their role."
+    ]
   },
   {
     "id": "PB-D020-2",
@@ -194,7 +272,13 @@
     ],
     "correct": 0,
     "why": "Power of attorney concerns the representative's authority, not inventorship, ownership, or patentability.",
-    "ref": "MPEP 402"
+    "ref": "MPEP 402",
+    "choiceWhy": [
+      "Power of attorney concerns the representative's authority, not inventorship, ownership, or patentability.",
+      "A practitioner is not made an inventor by appointment.",
+      "Appointment doesn't establish claim patentability.",
+      "A power of attorney does not transfer rights to a court."
+    ]
   },
   {
     "id": "PB-D020-3",
@@ -208,7 +292,13 @@
     ],
     "correct": 1,
     "why": "Representing others in patent matters is governed by USPTO practitioner rules.",
-    "ref": "MPEP 401–403; 37 CFR Part 11"
+    "ref": "MPEP 401–403; 37 CFR Part 11",
+    "choiceWhy": [
+      "Engineers may help prepare technical descriptions even if unregistered.",
+      "Representing others in patent matters is governed by USPTO practitioner rules.",
+      "Companies can hold patent rights.",
+      "A registered patent agent may handle authorized patent matters without being a trial lawyer."
+    ]
   },
   {
     "id": "PB-D021-1",
@@ -222,7 +312,13 @@
     ],
     "correct": 0,
     "why": "The oath/declaration addresses legally required inventorship-related statements in a patent application.",
-    "ref": "35 U.S.C. §115; MPEP 602"
+    "ref": "35 U.S.C. §115; MPEP 602",
+    "choiceWhy": [
+      "The oath/declaration addresses legally required inventorship-related statements in a patent application.",
+      "Oaths do not replace statutory claim requirements.",
+      "An inventor declaration doesn't transfer all patent rights to the government.",
+      "Commercial success is not determined by an inventor oath."
+    ]
   },
   {
     "id": "PB-D021-2",
@@ -236,7 +332,13 @@
     ],
     "correct": 1,
     "why": "A substitute statement can be available when statutory and regulatory conditions apply.",
-    "ref": "35 U.S.C. §115; 37 CFR 1.64"
+    "ref": "35 U.S.C. §115; 37 CFR 1.64",
+    "choiceWhy": [
+      "A missing inventor cannot simply trigger a patent grant.",
+      "A substitute statement can be available when statutory and regulatory conditions apply.",
+      "Naming an examiner doesn't correct a missing inventor statement.",
+      "Deleting disclosure is not a substitute for a missing declaration."
+    ]
   },
   {
     "id": "PB-D021-3",
@@ -250,7 +352,13 @@
     ],
     "correct": 2,
     "why": "An assignment transfers rights; it serves a different purpose from an inventor's oath or declaration.",
-    "ref": "MPEP 301; MPEP 602"
+    "ref": "MPEP 301; MPEP 602",
+    "choiceWhy": [
+      "A declaration addresses inventor-related statements, not ownership transfer.",
+      "ADS supplies structured information, not the transfer instrument.",
+      "An assignment transfers rights; it serves a different purpose from an inventor's oath or declaration.",
+      "Claims define the invention and don't transfer title."
+    ]
   },
   {
     "id": "PB-D022-1",
@@ -264,7 +372,13 @@
     ],
     "correct": 0,
     "why": "An ADS organizes inventor/applicant data and certain priority or benefit information.",
-    "ref": "37 CFR 1.76"
+    "ref": "37 CFR 1.76",
+    "choiceWhy": [
+      "An ADS organizes inventor/applicant data and certain priority or benefit information.",
+      "Laboratory notebooks may be evidence but are not the basic ADS content.",
+      "Claims are in the application; an ADS isn't their substitute.",
+      "An ADS does not guarantee that claims satisfy the law."
+    ]
   },
   {
     "id": "PB-D022-2",
@@ -278,7 +392,13 @@
     ],
     "correct": 1,
     "why": "The specification is the principal written technical disclosure, distinct from an ADS.",
-    "ref": "MPEP 608.01"
+    "ref": "MPEP 608.01",
+    "choiceWhy": [
+      "Company income reports do not explain how to make and use an invention.",
+      "The specification is the principal written technical disclosure, distinct from an ADS.",
+      "Ownership paperwork doesn't serve as the invention's technical disclosure.",
+      "An ADS is mainly bibliographic, not the technical specification."
+    ]
   },
   {
     "id": "PB-D022-3",
@@ -292,7 +412,13 @@
     ],
     "correct": 0,
     "why": "Priority and benefit need proper procedural steps and adequate earlier support.",
-    "ref": "MPEP 211; 37 CFR 1.76"
+    "ref": "MPEP 211; 37 CFR 1.76",
+    "choiceWhy": [
+      "Priority and benefit need proper procedural steps and adequate earlier support.",
+      "A verbal assertion alone doesn't necessarily meet formal benefit requirements.",
+      "An ADS cannot create technical disclosure missing from the earlier filing.",
+      "Benefit claims don't exempt the later claims from examination."
+    ]
   },
   {
     "id": "PB-D023-1",
@@ -306,7 +432,13 @@
     ],
     "correct": 2,
     "why": "The claims define the subject matter sought to be protected.",
-    "ref": "35 U.S.C. §112(b)"
+    "ref": "35 U.S.C. §112(b)",
+    "choiceWhy": [
+      "The abstract briefly summarizes technology, not legal claim scope.",
+      "The applicant's resume doesn't define patent boundaries.",
+      "The claims define the subject matter sought to be protected.",
+      "A title only identifies the invention generally."
+    ]
   },
   {
     "id": "PB-D023-2",
@@ -320,7 +452,13 @@
     ],
     "correct": 0,
     "why": "Drawings may assist, but the disclosure must satisfy applicable written-description and enablement requirements.",
-    "ref": "MPEP 2163–2164"
+    "ref": "MPEP 2163–2164",
+    "choiceWhy": [
+      "Drawings may assist, but the disclosure must satisfy applicable written-description and enablement requirements.",
+      "A drawing does not confer worldwide patent rights.",
+      "Technical disclosure defects aren't trademark issues.",
+      "Drawings don't guarantee patentability or automatic grant."
+    ]
   },
   {
     "id": "PB-D023-3",
@@ -334,7 +472,13 @@
     ],
     "correct": 3,
     "why": "The abstract summarizes the disclosure rather than setting claim boundaries.",
-    "ref": "MPEP 608.01(b)"
+    "ref": "MPEP 608.01(b)",
+    "choiceWhy": [
+      "An abstract does not appoint representatives.",
+      "An abstract does not transfer ownership.",
+      "An abstract does not replace claims.",
+      "The abstract summarizes the disclosure rather than setting claim boundaries."
+    ]
   },
   {
     "id": "PB-D024-1",
@@ -348,7 +492,13 @@
     ],
     "correct": 1,
     "why": "Filing receipts provide administrative information; they are not notices of allowance.",
-    "ref": "MPEP 503, 506"
+    "ref": "MPEP 503, 506",
+    "choiceWhy": [
+      "Filing receipts don't adjudicate patentability.",
+      "Filing receipts provide administrative information; they are not notices of allowance.",
+      "Ownership disputes aren't resolved by the filing receipt.",
+      "A filing receipt need not be an issued patent document."
+    ]
   },
   {
     "id": "PB-D024-2",
@@ -362,7 +512,13 @@
     ],
     "correct": 2,
     "why": "Certain missing formalities can be addressed after a filing date has been accorded, subject to the governing rules.",
-    "ref": "MPEP 506"
+    "ref": "MPEP 506",
+    "choiceWhy": [
+      "Being accorded a filing date doesn't mean the patent has issued.",
+      "Missing formalities don't automatically make every claim invalid.",
+      "Certain missing formalities can be addressed after a filing date has been accorded, subject to the governing rules.",
+      "Legal filing-date rules govern the effect; there is no universal automatic loss."
+    ]
   },
   {
     "id": "PB-D024-3",
@@ -376,7 +532,13 @@
     ],
     "correct": 0,
     "why": "The filing date is determined by legal filing rules and can affect priority and prior art.",
-    "ref": "MPEP 506"
+    "ref": "MPEP 506",
+    "choiceWhy": [
+      "The filing date is determined by legal filing rules and can affect priority and prior art.",
+      "A filing date and issuance date are different milestones.",
+      "Publicity does not set a legally recognized filing date.",
+      "Filing dates can affect which references count as prior art."
+    ]
   },
   {
     "id": "PB-D025-1",
@@ -390,7 +552,13 @@
     ],
     "correct": 2,
     "why": "Issue fees are part of issuance procedures; they aren't the same as initial filing/search fees.",
-    "ref": "MPEP 1300"
+    "ref": "MPEP 1300",
+    "choiceWhy": [
+      "The search fee serves an application search function, not the post-allowance issuance step.",
+      "A trademark renewal fee isn't the patent issue fee.",
+      "Issue fees are part of issuance procedures; they aren't the same as initial filing/search fees.",
+      "Income tax isn't the USPTO's patent issue fee."
+    ]
   },
   {
     "id": "PB-D025-2",
@@ -404,7 +572,13 @@
     ],
     "correct": 1,
     "why": "Small-entity status depends on statutory and regulatory conditions, not age alone.",
-    "ref": "37 CFR 1.27; MPEP 509"
+    "ref": "37 CFR 1.27; MPEP 509",
+    "choiceWhy": [
+      "Company age alone doesn't establish entity-status eligibility.",
+      "Small-entity status depends on statutory and regulatory conditions, not age alone.",
+      "Micro-entity status has particular requirements; it isn't automatic.",
+      "Owning three patents isn't the ordinary sole test of small-entity status."
+    ]
   },
   {
     "id": "PB-D025-3",
@@ -418,7 +592,13 @@
     ],
     "correct": 0,
     "why": "Fee compliance does not decide substantive patentability under §102.",
-    "ref": "MPEP 607; 35 U.S.C. §102"
+    "ref": "MPEP 607; 35 U.S.C. §102",
+    "choiceWhy": [
+      "Fee compliance does not decide substantive patentability under §102.",
+      "Fee payment doesn't establish novelty.",
+      "Paying fees doesn't prove there is no earlier prior art.",
+      "Payment cannot create patent-practice registration."
+    ]
   },
   {
     "id": "PB-D026-1",
@@ -432,7 +612,13 @@
     ],
     "correct": 2,
     "why": "An effective filing date for a claim depends on actual disclosure support, not only the existence of a provisional.",
-    "ref": "MPEP 201.04"
+    "ref": "MPEP 201.04",
+    "choiceWhy": [
+      "An earlier provisional doesn't automatically support an entirely new sensor.",
+      "A provisional can support later claimed matter that it adequately disclosed.",
+      "An effective filing date for a claim depends on actual disclosure support, not only the existence of a provisional.",
+      "Patent benefit disputes don't require changing the filing to a trademark."
+    ]
   },
   {
     "id": "PB-D026-2",
@@ -446,7 +632,13 @@
     ],
     "correct": 0,
     "why": "Section 119(e) generally involves a twelve-month filing interval, with limited relief provisions.",
-    "ref": "35 U.S.C. §119(e)"
+    "ref": "35 U.S.C. §119(e)",
+    "choiceWhy": [
+      "Section 119(e) generally involves a twelve-month filing interval, with limited relief provisions.",
+      "Thirty-six months is not the normal provisional-benefit filing period.",
+      "Inventor retirement is unrelated to the period.",
+      "Twenty years generally concerns patent-term principles, not provisional benefit timing."
+    ]
   },
   {
     "id": "PB-D026-3",
@@ -460,7 +652,13 @@
     ],
     "correct": 1,
     "why": "A provisional can establish a date for supported material, but a patent does not issue from it alone.",
-    "ref": "MPEP 201.04"
+    "ref": "MPEP 201.04",
+    "choiceWhy": [
+      "A provisional does not issue as a patent on its own.",
+      "A provisional can establish a date for supported material, but a patent does not issue from it alone.",
+      "There is no universal twenty-claim requirement for provisional filings.",
+      "A later qualifying nonprovisional is ordinarily needed to pursue a utility patent."
+    ]
   },
   {
     "id": "PB-D027-1",
@@ -474,7 +672,13 @@
     ],
     "correct": 2,
     "why": "The typical Paris Convention priority period for utility patent filings is twelve months.",
-    "ref": "35 U.S.C. §119(a); MPEP 213"
+    "ref": "35 U.S.C. §119(a); MPEP 213",
+    "choiceWhy": [
+      "Thirty months is associated with some PCT national-stage matters, not basic Paris utility priority.",
+      "Five years from foreign grant isn't the general priority interval.",
+      "The typical Paris Convention priority period for utility patent filings is twelve months.",
+      "Patent term isn't the foreign priority period."
+    ]
   },
   {
     "id": "PB-D027-2",
@@ -488,7 +692,13 @@
     ],
     "correct": 0,
     "why": "Foreign priority still requires adequate disclosure of the claimed subject matter.",
-    "ref": "MPEP 216"
+    "ref": "MPEP 216",
+    "choiceWhy": [
+      "Foreign priority still requires adequate disclosure of the claimed subject matter.",
+      "A foreign filing doesn't supply disclosure it never contained.",
+      "Translating a title cannot add omitted technical information.",
+      "Foreign priority depends on disclosure, not corporate inventor status."
+    ]
   },
   {
     "id": "PB-D027-3",
@@ -502,7 +712,13 @@
     ],
     "correct": 3,
     "why": "Foreign priority is not a worldwide patent grant.",
-    "ref": "MPEP 213"
+    "ref": "MPEP 213",
+    "choiceWhy": [
+      "The Paris Convention doesn't itself issue a global patent.",
+      "Foreign priority is not an international automatic patent grant.",
+      "U.S. applications can be filed after foreign applications, subject to rules.",
+      "Foreign priority is not a worldwide patent grant."
+    ]
   },
   {
     "id": "PB-D028-1",
@@ -516,7 +732,13 @@
     ],
     "correct": 1,
     "why": "A regular continuation is based on the earlier disclosure and does not introduce new matter.",
-    "ref": "MPEP 201.07"
+    "ref": "MPEP 201.07",
+    "choiceWhy": [
+      "Continuations generally may not add new subject matter.",
+      "A regular continuation is based on the earlier disclosure and does not introduce new matter.",
+      "Adding entirely new subject matter is a CIP concept, not a basic continuation.",
+      "A new abstract alone does not define continuation practice."
+    ]
   },
   {
     "id": "PB-D028-2",
@@ -530,7 +752,13 @@
     ],
     "correct": 2,
     "why": "Divisionals are commonly used to pursue an invention separated from an earlier application.",
-    "ref": "MPEP 201.06"
+    "ref": "MPEP 201.06",
+    "choiceWhy": [
+      "A trademark concerns a mark, not a patent divisional.",
+      "Certificates of correction address certain issued-patent errors.",
+      "Divisionals are commonly used to pursue an invention separated from an earlier application.",
+      "Maintenance petitions concern issued-patent fees."
+    ]
   },
   {
     "id": "PB-D028-3",
@@ -544,7 +772,13 @@
     ],
     "correct": 0,
     "why": "Under applicable continuation benefit rules, the filing relationship and pendency conditions matter.",
-    "ref": "35 U.S.C. §120; MPEP 211"
+    "ref": "35 U.S.C. §120; MPEP 211",
+    "choiceWhy": [
+      "Under applicable continuation benefit rules, the filing relationship and pendency conditions matter.",
+      "Co-pendency refers to an application relationship, not people physically collaborating.",
+      "Co-pendency isn't a reduced fee category.",
+      "Application-pendency conditions are distinct from public disclosure."
+    ]
   },
   {
     "id": "PB-D029-1",
@@ -558,7 +792,13 @@
     ],
     "correct": 3,
     "why": "A CIP repeats some earlier disclosure while introducing new matter.",
-    "ref": "MPEP 201.08"
+    "ref": "MPEP 201.08",
+    "choiceWhy": [
+      "A CIP may be filed in the United States.",
+      "A CIP is still a patent application, not copyright registration.",
+      "CIPs aren't limited to post-expiration filings.",
+      "A CIP repeats some earlier disclosure while introducing new matter."
+    ]
   },
   {
     "id": "PB-D029-2",
@@ -572,7 +812,13 @@
     ],
     "correct": 1,
     "why": "New subject matter gets no earlier date merely by belonging to a CIP family.",
-    "ref": "MPEP 201.08; MPEP 211"
+    "ref": "MPEP 201.08; MPEP 211",
+    "choiceWhy": [
+      "An earlier filing cannot support a technical feature it lacked.",
+      "New subject matter gets no earlier date merely by belonging to a CIP family.",
+      "A CIP adding new matter does not necessarily invalidate the parent invention.",
+      "Salary does not determine effective filing date."
+    ]
   },
   {
     "id": "PB-D029-3",
@@ -586,7 +832,13 @@
     ],
     "correct": 2,
     "why": "Support must be analyzed for each claimed invention, not just by application title.",
-    "ref": "MPEP 211"
+    "ref": "MPEP 211",
+    "choiceWhy": [
+      "CIP status doesn't automatically give all claims the earliest date.",
+      "The examiner's reading date doesn't control earlier support.",
+      "Support must be analyzed for each claimed invention, not just by application title.",
+      "Maintenance fee dates have nothing to do with parent disclosure."
+    ]
   },
   {
     "id": "PB-D030-1",
@@ -600,7 +852,13 @@
     ],
     "correct": 0,
     "why": "Inventorship and ownership are distinct even when rights are assigned.",
-    "ref": "MPEP 301; MPEP 2109"
+    "ref": "MPEP 301; MPEP 2109",
+    "choiceWhy": [
+      "Inventorship and ownership are distinct even when rights are assigned.",
+      "Assignments don't transform an employer into a natural-person inventor.",
+      "Inventorship must still be identified after rights are transferred.",
+      "Ownership isn't reserved for examiners."
+    ]
   },
   {
     "id": "PB-D030-2",
@@ -614,7 +872,13 @@
     ],
     "correct": 3,
     "why": "Administrative identity information does not replace written-description support.",
-    "ref": "MPEP 2163"
+    "ref": "MPEP 2163",
+    "choiceWhy": [
+      "An ADS doesn't supply missing technical description.",
+      "Correct name information doesn't force grant.",
+      "Continuations may be possible under applicable conditions.",
+      "Administrative identity information does not replace written-description support."
+    ]
   },
   {
     "id": "PB-D030-3",
@@ -628,7 +892,13 @@
     ],
     "correct": 1,
     "why": "The claimed invention must be evaluated against the earlier application disclosure.",
-    "ref": "MPEP 201.04; MPEP 211"
+    "ref": "MPEP 201.04; MPEP 211",
+    "choiceWhy": [
+      "Issue-fee payer identity isn't the legal test of disclosure support.",
+      "The claimed invention must be evaluated against the earlier application disclosure.",
+      "Advertising doesn't substitute for written disclosure support.",
+      "Patent-term preference doesn't establish effective filing dates."
+    ]
   }
 ];
 const ids=new Set(questions.map(q=>String(q.id)));for(const q of added){if(!ids.has(q.id)){questions.push(q);ids.add(q.id)}}
