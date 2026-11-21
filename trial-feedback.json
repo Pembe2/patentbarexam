@@ -13,6 +13,19 @@
       "notes": "",
       "source": "user submitted evaluation",
       "loggedOn": "2026-11-21"
+    },
+    {
+      "lesson": 2,
+      "ratings": {
+        "terminology": "Yes",
+        "engineeringExample": "Yes",
+        "questionPreparation": "Yes",
+        "answerExplanations": "Yes",
+        "length": "Somewhat"
+      },
+      "notes": "I feel like a little longer learning section would be helpful.",
+      "source": "user submitted evaluation",
+      "loggedOn": "2026-11-21"
     }
   ]
 }
