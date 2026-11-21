@@ -158,6 +158,18 @@ button,a,select{touch-action:manipulation}
  .daily-work{padding:17px 14px}
 }
 .daily-list-item:disabled{opacity:.52;cursor:not-allowed;background:#f5f7fb}.daily-list-item:disabled:hover{border-color:#dbe2ed;background:#f5f7fb}
+
+/* Daily learning welcome dialog */
+body.daily-modal-open{overflow:hidden}
+.daily-modal-backdrop{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(11,23,46,.65)}
+.daily-modal{width:min(100%,480px);max-height:calc(100dvh - 36px);overflow-y:auto;background:#fff;color:#18233a;border-radius:20px;padding:27px;box-shadow:0 22px 80px rgba(0,0,0,.28)}
+.daily-modal-eyebrow{font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#315fbb;margin-bottom:12px}
+.daily-modal h2{font-size:26px;line-height:1.2;margin:0 0 14px}
+.daily-modal p{line-height:1.6;margin:0 0 13px}
+.daily-modal-summary{color:#53637c}
+.daily-modal-actions{display:flex;gap:9px;flex-wrap:wrap;margin:19px 0 14px}
+.daily-modal-actions .btn{justify-content:center;flex:1 1 165px}
+@media(max-width:650px){.daily-modal-backdrop{padding:14px;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}.daily-modal{border-radius:17px;padding:23px 18px;max-height:calc(100dvh - 28px)}.daily-modal h2{font-size:23px}.daily-modal-actions{flex-direction:column}.daily-modal-actions .btn{flex:auto;width:100%;min-height:48px}}
 </style>
 </head>
 <body><div class="shell"><aside class="side"><div class="brand"><span class="logo">§</span><span>PATENT BAR<br>STUDY HUB</span></div><div class="tiny">Workspace</div><div class="nav-wrap"><button class="nav active" data-view="dashboard"><span>▦</span>Dashboard</button><button class="nav" data-view="learn"><span>▤</span>Study modules</button><button class="nav" data-view="practice"><span>✎</span>Practice questions</button><button class="nav" data-view="flashcards"><span>▣</span>Flashcards</button><button class="nav" data-view="planner"><span>◷</span>Study plan</button><button class="nav" data-view="resources"><span>↗</span>Resources</button></div><div class="side-note"><strong>Built around official sources</strong><br>USPTO registration exam updated September 23, 2026.<br>Primary reference: MPEP 9th Ed., Rev. 01.2024.</div></aside><main class="main">
