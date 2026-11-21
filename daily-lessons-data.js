@@ -1,4 +1,4 @@
-/* Sequential daily foundations: terms introduced before they are tested. */
+/* Sequential foundational lessons; essential vocabulary precedes practice. */
 window.PATENT_DAILY_LESSONS=[
   {
     "title": "What is a patent?",
@@ -141,6 +141,18 @@ window.PATENT_DAILY_LESSONS=[
       {
         "term": "Anticipation",
         "meaning": "A novelty problem when one qualifying earlier source discloses every feature of the claim."
+      },
+      {
+        "term": "Specification",
+        "meaning": "The application's detailed written description of the invention and how it works."
+      },
+      {
+        "term": "Abstract",
+        "meaning": "A short technical summary; it does not determine legal claim boundaries."
+      },
+      {
+        "term": "35 U.S.C. § 102",
+        "meaning": "The primary U.S. statute covering novelty and specified prior-art rules."
       }
     ],
     "reviewTerms": [
@@ -190,6 +202,22 @@ window.PATENT_DAILY_LESSONS=[
       {
         "term": "Written description",
         "meaning": "A requirement that the original application show the inventor had possession of the claimed invention."
+      },
+      {
+        "term": "35 U.S.C. § 112(a)",
+        "meaning": "The subsection requiring written description, enablement, and best mode."
+      },
+      {
+        "term": "Enablement",
+        "meaning": "Teaching a skilled person to make and use the full claimed invention without undue experimentation."
+      },
+      {
+        "term": "Best mode",
+        "meaning": "The inventor's contemplated best way to carry out the invention, required to be disclosed under § 112(a)."
+      },
+      {
+        "term": "35 U.S.C. § 112(b)",
+        "meaning": "The subsection concerning definite, clearly bounded claims."
       }
     ],
     "reviewTerms": [
@@ -243,6 +271,22 @@ window.PATENT_DAILY_LESSONS=[
       {
         "term": "Final rejection",
         "meaning": "An Office action with restrictions on further changes, not necessarily the end of all options."
+      },
+      {
+        "term": "Objection",
+        "meaning": "An examiner's challenge commonly concerning application form or procedural defects."
+      },
+      {
+        "term": "Reply",
+        "meaning": "The applicant's formal response addressing points raised in an Office action."
+      },
+      {
+        "term": "RCE",
+        "meaning": "Request for continued examination, available under specified rules after prosecution reaches certain stages."
+      },
+      {
+        "term": "Amendment",
+        "meaning": "A permitted change to the application, such as changing claim language, within applicable limits."
       }
     ],
     "reviewTerms": [
