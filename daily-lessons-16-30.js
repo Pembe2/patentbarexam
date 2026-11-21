@@ -1,4 +1,4 @@
-/* Developed daily lessons 16–30, loaded after original foundations. */
+/* Developed lessons 16–30 with integrated, stable-ID practice questions. */
 window.PATENT_DAILY_LESSONS.push(...[
   {
     "id": "DL-016",
@@ -33,7 +33,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Claim",
       "Patent application"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D016-1",
+      "PB-D016-2",
+      "PB-D016-3"
+    ],
     "minutes": 10
   },
   {
@@ -69,7 +73,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Conception",
       "Actual inventor"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D017-1",
+      "PB-D017-2",
+      "PB-D017-3"
+    ],
     "minutes": 10
   },
   {
@@ -105,7 +113,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Joint inventor",
       "Inventive entity"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D018-1",
+      "PB-D018-2",
+      "PB-D018-3"
+    ],
     "minutes": 10
   },
   {
@@ -141,7 +153,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Assignment",
       "Assignee"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D019-1",
+      "PB-D019-2",
+      "PB-D019-3"
+    ],
     "minutes": 10
   },
   {
@@ -177,7 +193,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Recordation",
       "Title"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D020-1",
+      "PB-D020-2",
+      "PB-D020-3"
+    ],
     "minutes": 10
   },
   {
@@ -213,7 +233,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Registered practitioner",
       "Juristic entity"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D021-1",
+      "PB-D021-2",
+      "PB-D021-3"
+    ],
     "minutes": 10
   },
   {
@@ -249,7 +273,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Oath or declaration",
       "Substitute statement"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D022-1",
+      "PB-D022-2",
+      "PB-D022-3"
+    ],
     "minutes": 10
   },
   {
@@ -285,7 +313,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "ADS",
       "Bibliographic data"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D023-1",
+      "PB-D023-2",
+      "PB-D023-3"
+    ],
     "minutes": 10
   },
   {
@@ -321,7 +353,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Specification",
       "Drawings"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D024-1",
+      "PB-D024-2",
+      "PB-D024-3"
+    ],
     "minutes": 10
   },
   {
@@ -357,7 +393,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Filing receipt",
       "Filing date"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D025-1",
+      "PB-D025-2",
+      "PB-D025-3"
+    ],
     "minutes": 10
   },
   {
@@ -393,7 +433,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Filing fee",
       "Small entity"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D026-1",
+      "PB-D026-2",
+      "PB-D026-3"
+    ],
     "minutes": 10
   },
   {
@@ -429,7 +473,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Provisional application",
       "Effective filing date"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D027-1",
+      "PB-D027-2",
+      "PB-D027-3"
+    ],
     "minutes": 10
   },
   {
@@ -465,7 +513,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Foreign priority",
       "Paris Convention"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D028-1",
+      "PB-D028-2",
+      "PB-D028-3"
+    ],
     "minutes": 10
   },
   {
@@ -501,7 +553,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Continuation",
       "Divisional"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D029-1",
+      "PB-D029-2",
+      "PB-D029-3"
+    ],
     "minutes": 10
   },
   {
@@ -537,7 +593,11 @@ window.PATENT_DAILY_LESSONS.push(...[
       "Continuation-in-part",
       "New matter"
     ],
-    "ids": [],
+    "ids": [
+      "PB-D030-1",
+      "PB-D030-2",
+      "PB-D030-3"
+    ],
     "minutes": 10
   }
 ]);
