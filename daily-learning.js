@@ -185,6 +185,14 @@ function showDailyPrompt(){
  modal.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();closeDailyPrompt(true)}});
  modal.querySelector('#dailyModalStart').focus();
 }
+window.openDailyLessonReference=function(day){
+ const lesson=lessons.find(l=>l.day===Number(day));
+ if(!lesson)return openDaily();
+ const next=current();
+ // Previously completed lessons and the next unlocked lesson can be opened directly.
+ if(stored().completed[lesson.id]||(next&&next.id===lesson.id))start(lesson.id);
+ else openDaily();
+};
 const oldShowView=showView;
 showView=function(id){oldShowView(id);if(id==='dashboard')renderBanner();};
 renderBanner();
