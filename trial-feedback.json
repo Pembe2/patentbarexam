@@ -26,6 +26,19 @@
       "notes": "I feel like a little longer learning section would be helpful.",
       "source": "user submitted evaluation",
       "loggedOn": "2026-11-21"
+    },
+    {
+      "lesson": 3,
+      "ratings": {
+        "terminology": "Somewhat",
+        "engineeringExample": "Somewhat",
+        "questionPreparation": "Somewhat",
+        "answerExplanations": "Yes",
+        "length": "Somewhat"
+      },
+      "notes": "The unfamiliar terms window contained critical information needed to answer questions. Terms such as specification and prior art were not adequately taught in the learning section. Teach all necessary concepts before questions.",
+      "source": "user submitted evaluation",
+      "loggedOn": "2026-11-21"
     }
   ]
 }
