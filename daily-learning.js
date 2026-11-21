@@ -122,6 +122,7 @@ function renderStep(){
 }
 function findQ(id){return questions.find(q=>String(q.id)===String(id))}
 function explanation(q,i){
+ if(Array.isArray(q.choiceWhy)&&q.choiceWhy[i])return q.choiceWhy[i];
  if(i===q.correct)return q.why;
  const lists=[window.PATENT_FEEDBACK_ORIGINAL,window.PATENT_FEEDBACK_21_45,window.PATENT_FEEDBACK_46_70];
  const a=lists.map(x=>x&&x[String(q.id)]).find(Boolean);
