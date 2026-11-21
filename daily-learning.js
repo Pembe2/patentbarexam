@@ -63,6 +63,22 @@ function renderBanner(){
  banner.querySelector('#dailyGo').addEventListener('click',()=>openDaily());
  const later=banner.querySelector('#dailyLater');if(later)later.addEventListener('click',()=>{d.dismissedDate=localDay();save();banner.classList.add('daily-dismissed');later.remove();});
 }
+function enriched(l){return (window.PATENT_LESSON_ENRICHMENT||{})[l.day]||null}
+function teachingHTML(l){
+ const e=enriched(l);
+ if(!e)return '<section class="daily-teaching-section"><h3>Understand the rule</h3><p class="daily-def">'+safe(l.definition)+'</p>'+l.plain.map(p=>'<p>'+safe(p)+'</p>').join('')+'</section>';
+ return '<section class="daily-teaching-section"><h3>The rule to learn</h3><div class="daily-teaching-rule">'+safe(e.rule)+'</div>'+
+ '<h3>What that actually means</h3>'+e.explain.map((p,i)=>'<div class="daily-teaching-paragraph"><span class="daily-teaching-index">'+(i+1)+'</span><p>'+safe(p)+'</p></div>').join('')+'</section>';
+}
+function exampleHTML(l){
+ const e=enriched(l);
+ return '<h3>Worked engineering example</h3>'+
+ (e?'<p class="small muted">Follow the reasoning in order. The practice questions will use the same concepts.</p><ol class="daily-worked-steps">'+e.worked.map(x=>'<li>'+safe(x)+'</li>').join('')+'</ol>':
+ '<p class="daily-def">'+safe(l.example)+'</p>')+
+ (e?'<div class="daily-ready-list"><h3>Before the questions, you should know</h3><ul>'+e.before.map(x=>'<li>'+safe(x)+'</li>').join('')+'</ul></div>':'')+
+ '<div class="daily-note"><strong>Common exam trap:</strong> '+safe(l.trap)+'</div>'+
+ '<p class="small muted">Use the glossary as an optional reminder; essential terms should already have been taught above.</p>';
+}
 function heading(l,subtitle){
  return '<div class="daily-title"><div class="eyebrow">Lesson '+l.day+' of '+lessons.length+' · '+safe(l.tag)+'</div><h2>'+safe(l.title)+'</h2><p class="small muted">'+safe(subtitle)+'</p></div>';
 }
@@ -73,7 +89,7 @@ function renderIndex(){
  const pct=Math.round(doneCount()/lessons.length*100);
  app.innerHTML='<div class="card daily-start"><div class="flex" style="justify-content:space-between"><strong>Your foundation course</strong><span class="pill">'+doneCount()+' / '+lessons.length+' completed</span></div>'+
  '<div class="bar"><div style="width:'+pct+'%"></div></div>'+
- (l?'<h2 style="margin-top:18px">Up next: '+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><p class="small muted">≈ 10 minutes. Read, see a practical example, answer three questions and recap.</p><button class="btn" id="dailyStart">Start lesson '+l.day+' →</button>':'<h2 style="margin-top:18px">All '+lessons.length+' available lessons completed!</h2><p>Review any lesson below. Your completed lessons remain available.</p>')+'</div>'+
+ (l?'<h2 style="margin-top:18px">Up next: '+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><p class="small muted">≈ 10 minutes. Learn the vocabulary and legal rule, work through an engineering example, then answer three questions.</p><button class="btn" id="dailyStart">Start lesson '+l.day+' →</button>':'<h2 style="margin-top:18px">All '+lessons.length+' available lessons completed!</h2><p>Review any lesson below. Your completed lessons remain available.</p>')+'</div>'+
  '<h3 style="margin:23px 0 12px">Your lessons</h3><div class="daily-lesson-list">'+lessons.map(x=>'<button type="button" class="daily-list-item '+(d.completed[x.id]?'complete':'')+'" '+(!d.completed[x.id]&&l&&x.day>l.day?'disabled aria-label="Locked — complete earlier lessons first"':'')+' data-daily-id="'+safe(x.id)+'"><span class="daily-list-number">'+(d.completed[x.id]?'✓':x.day)+'</span><span><strong>'+safe(x.title)+'</strong><small>'+safe(x.tag)+'</small></span><span class="muted">›</span></button>').join('')+'</div>';
  if(l)app.querySelector('#dailyStart').addEventListener('click',()=>start(l.id));
  app.querySelectorAll('[data-daily-id]:not(:disabled)').forEach(x=>x.addEventListener('click',()=>start(x.dataset.dailyId)));
@@ -103,11 +119,11 @@ function renderStep(){
  const l=selected;if(!l)return renderIndex();
  const app=document.getElementById('dailyApp');
  const steps=['Learn','Example','Practice','Recap'];const n=phase;
- const top=heading(l,'About 10 minutes · '+steps[n]+' · Step '+(n+1)+' of 4')+
+ const top=heading(l,'About 10–15 minutes · '+steps[n]+' · Step '+(n+1)+' of 4')+
  '<div class="daily-steps">'+steps.map((x,i)=>'<span class="'+(i===n?'active':i<n?'done':'')+'">'+(i+1)+'. '+x+'</span>').join('')+'</div>';
  let content='';
- if(phase===0)content='<div class="daily-reading">'+vocabDisplay(l)+'<h3>Now put those words together</h3><p class="daily-def">'+safe(l.definition)+'</p>'+l.plain.map((p)=>'<p>'+safe(p)+'</p>').join('')+'<div class="daily-note"><strong>Remember:</strong> '+safe(l.recap)+'</div></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">All lessons</button><button class="btn" id="dailyContinue">See the engineering example →</button></div>';
- if(phase===1)content='<div class="daily-reading"><h3>Engineering example</h3><p class="daily-def">'+safe(l.example)+'</p><div class="daily-note"><strong>Common exam trap:</strong> '+safe(l.trap)+'</div><p>Now apply the idea to three questions. When you answer, you’ll see why each choice is right or wrong, plus an explanation.</p></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">← Back</button><button class="btn" id="dailyContinue">Try 3 questions →</button></div>';
+ if(phase===0)content='<div class="daily-reading">'+vocabDisplay(l)+teachingHTML(l)+'<div class="daily-note"><strong>Remember:</strong> '+safe(l.recap)+'</div></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">All lessons</button><button class="btn" id="dailyContinue">See the engineering example →</button></div>';
+ if(phase===1)content='<div class="daily-reading">'+exampleHTML(l)+'</div><div class="daily-controls"><button class="btn ghost" id="dailyBack">← Back</button><button class="btn" id="dailyContinue">Try 3 questions →</button></div>';
  if(phase===2)content='<div id="dailyQuestion"></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">← Back</button><button class="btn hidden" id="dailyContinue">Next →</button></div>';
  if(phase===3)content='<div class="daily-reading"><h3>Today’s takeaway</h3><p class="daily-def">'+safe(l.recap)+'</p><div class="daily-note"><strong>Exam trap:</strong> '+safe(l.trap)+'</div><div class="daily-recap-words"><strong>Words to remember:</strong> '+(l.vocabulary||[]).map(x=>safe(x.term)).join(' · ')+'</div><p><strong>Your practice:</strong> '+correctCount+' of '+l.ids.length+' correct. Getting questions wrong is part of learning—those answers were added to your existing review history.</p><p class="small muted">Reference to explore: '+safe(l.refs)+'. Confirm detailed rules and exceptions in the official MPEP.</p><a class="resource" target="_blank" rel="noopener" href="https://www.uspto.gov/web/offices/pac/mpep/index.html">Open USPTO MPEP ↗</a></div><div class="daily-controls"><button class="btn ghost" id="dailyBack">← Back</button><button class="btn" id="dailyFinish">Mark lesson complete ✓</button></div>';
  app.innerHTML='<div class="card daily-work">'+top+content+'</div>';
