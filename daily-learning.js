@@ -63,19 +63,20 @@ function renderBanner(){
  banner.querySelector('#dailyGo').addEventListener('click',()=>openDaily());
  const later=banner.querySelector('#dailyLater');if(later)later.addEventListener('click',()=>{d.dismissedDate=localDay();save();banner.classList.add('daily-dismissed');later.remove();});
 }
+function teachFormat(s){return safe(s).replace(/\\*\\*(.+?)\\*\\*/g,'<strong>$1</strong>')}
 function enriched(l){return (window.PATENT_LESSON_ENRICHMENT||{})[l.day]||null}
 function teachingHTML(l){
  const e=enriched(l);
  if(!e)return '<section class="daily-teaching-section"><h3>Understand the rule</h3><p class="daily-def">'+safe(l.definition)+'</p>'+l.plain.map(p=>'<p>'+safe(p)+'</p>').join('')+'</section>';
- return '<section class="daily-teaching-section"><h3>The rule to learn</h3><div class="daily-teaching-rule">'+safe(e.rule)+'</div>'+
+ return '<section class="daily-teaching-section"><h3>The rule to learn</h3><div class="daily-teaching-rule">'+teachFormat(e.rule)+'</div>'+
  '<h3>What that actually means</h3>'+e.explain.map((p,i)=>'<div class="daily-teaching-paragraph"><span class="daily-teaching-index">'+(i+1)+'</span><p>'+safe(p)+'</p></div>').join('')+'</section>';
 }
 function exampleHTML(l){
  const e=enriched(l);
  return '<h3>Worked engineering example</h3>'+
- (e?'<p class="small muted">Follow the reasoning in order. The practice questions will use the same concepts.</p><ol class="daily-worked-steps">'+e.worked.map(x=>'<li>'+safe(x)+'</li>').join('')+'</ol>':
+ (e?'<p class="small muted">Follow the reasoning in order. The practice questions will use the same concepts.</p><ol class="daily-worked-steps">'+e.worked.map(x=>'<li>'+teachFormat(x)+'</li>').join('')+'</ol>':
  '<p class="daily-def">'+safe(l.example)+'</p>')+
- (e?'<div class="daily-ready-list"><h3>Before the questions, you should know</h3><ul>'+e.before.map(x=>'<li>'+safe(x)+'</li>').join('')+'</ul></div>':'')+
+ (e?'<div class="daily-ready-list"><h3>Before the questions, you should know</h3><ul>'+e.before.map(x=>'<li>'+teachFormat(x)+'</li>').join('')+'</ul></div>':'')+
  '<div class="daily-note"><strong>Common exam trap:</strong> '+safe(l.trap)+'</div>'+
  '<p class="small muted">Use the glossary as an optional reminder; essential terms should already have been taught above.</p>';
 }
