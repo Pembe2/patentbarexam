@@ -1,14 +1,14 @@
-/* First 15 sequential 10-minute foundational lessons. */
+/* Sequential daily foundations: terms introduced before they are tested. */
 window.PATENT_DAILY_LESSONS=[
   {
     "title": "What is a patent?",
     "tag": "The big picture",
     "term": "Patent",
-    "definition": "A time-limited legal right to exclude others from certain activities involving a claimed invention. It is not a government guarantee that your product works or that you are free to make it.",
+    "definition": "A patent is a limited legal right to stop others from using certain claimed features of an invention. First, someone must file an application and have it examined.",
     "plain": [
-      "Think of a patent as defining a fenced-off technical design. The fence is drawn by the claims, not by how exciting the inventor's idea sounds.",
-      "In the U.S., useful inventions commonly seek utility patents. The applicant submits a disclosure, the USPTO examines it, and only after requirements are met can a patent issue.",
-      "Patents are different from trademarks (which identify commercial sources) and copyrights (which protect certain original expression)."
+      "A patent gives its owner a limited right to exclude others from certain activities involving an invention. The right's boundaries come from the claims—the sentences describing the protected features.",
+      "The inventor or other applicant asks the United States Patent and Trademark Office (USPTO) for this right by submitting a patent application. The USPTO examines it. Filing an application alone does not mean a patent has been granted.",
+      "An approved application may receive a notice of allowance (a message that the claims are allowed). An issue fee usually must be paid before the patent is issued. We'll return to the examination process in a later lesson."
     ],
     "example": "An engineer invents a new adjustable pipe coupling. A granted utility patent might let the owner prevent others from making or selling products covered by its claims, even if the owner never manufactures the coupling.",
     "trap": "A patent application is a request, not an issued patent. A patent generally gives exclusion rights, not automatic permission to operate.",
@@ -21,7 +21,34 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-001",
     "day": 1,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Patent",
+        "meaning": "A government-granted right to stop others from doing certain things covered by the patent's claims for a limited time."
+      },
+      {
+        "term": "Patent application",
+        "meaning": "The documents filed to ask for a patent. An application is not yet an issued patent."
+      },
+      {
+        "term": "Claim",
+        "meaning": "A sentence that spells out exactly what the inventor wants patent protection for."
+      },
+      {
+        "term": "USPTO",
+        "meaning": "The United States Patent and Trademark Office, the federal agency that examines U.S. patent applications."
+      },
+      {
+        "term": "Applicant",
+        "meaning": "The person or organization seeking a patent."
+      },
+      {
+        "term": "Issue fee",
+        "meaning": "A fee generally paid after allowance and before a patent is issued."
+      }
+    ],
+    "reviewTerms": []
   },
   {
     "title": "Types of patents",
@@ -29,9 +56,9 @@ window.PATENT_DAILY_LESSONS=[
     "term": "Utility, design, plant",
     "definition": "Three distinct U.S. patent categories protect different kinds of subject matter.",
     "plain": [
-      "A utility patent concerns useful processes, machines, articles of manufacture, compositions of matter, and improvements. A design patent concerns the ornamental appearance of an article.",
-      "A plant patent concerns eligible plant varieties reproduced asexually. These categories have different subject-matter requirements and procedures.",
-      "Some products may have both functional and ornamental features, potentially leading to different applications. The patent type matters before you analyze the claimed invention."
+      "Yesterday you learned that a patent application asks the USPTO to protect the features described in its claims. Today we'll separate the main kinds of U.S. patents.",
+      "A utility patent generally protects how a useful invention works, such as a valve or manufacturing process. A design patent generally protects an article's ornamental appearance—its look rather than its technical function.",
+      "A plant patent covers certain qualifying asexually reproduced plants. A reissue is not a fourth original type; it is a way to correct certain problems in an already issued patent."
     ],
     "example": "A power drill's new clutch mechanism could be addressed by utility claims, while a new ornamental exterior shape might be covered by a design patent.",
     "trap": "A useful product's attractive appearance is not automatically a utility invention; and a functional mechanism is not protected merely by a design patent.",
@@ -44,7 +71,33 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-002",
     "day": 2,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Utility patent",
+        "meaning": "A patent aimed at a useful invention such as a machine, process, manufactured article or composition."
+      },
+      {
+        "term": "Design patent",
+        "meaning": "A patent covering a qualifying ornamental appearance of an article, not its function as such."
+      },
+      {
+        "term": "Plant patent",
+        "meaning": "A patent for an eligible distinct plant variety that has been asexually reproduced."
+      },
+      {
+        "term": "Ornamental",
+        "meaning": "About how something looks, rather than what mechanical job it performs."
+      },
+      {
+        "term": "Reissue",
+        "meaning": "A process for correcting certain problems in a patent that has already issued."
+      }
+    ],
+    "reviewTerms": [
+      "Patent",
+      "Patent application"
+    ]
   },
   {
     "title": "Claims: the important sentences",
@@ -52,9 +105,9 @@ window.PATENT_DAILY_LESSONS=[
     "term": "Patent claim",
     "definition": "A sentence (or set of limitations) that defines the scope of the invention for which protection is sought.",
     "plain": [
-      "A claim is like a technical requirement specification. Its individual features are called limitations. During examination, the examiner compares the full claim against the applicable legal requirements.",
-      "The specification and drawings help explain the invention, but the claims define the boundaries. Independent claims stand on their own; dependent claims add further limitations to another claim.",
-      "Read every limitation. If one key feature is absent from a single prior-art reference, that may defeat anticipation, even if the reference looks generally similar."
+      "Remember: the claims are the sentences that set the boundaries of protection. Each required feature in a claim is called a limitation.",
+      "An independent claim stands alone. A dependent claim refers to another claim and adds something more. Adding a requirement normally makes the scope narrower, like adding a constraint to an engineering specification.",
+      "Later you'll compare claim limitations against earlier published designs (prior art). If one qualifying older source discloses every limitation, that may cause an anticipation (novelty) problem."
     ],
     "example": "Claim: 'A clamp comprising a base, a spring and an adjustable stop.' All three features matter. A clamp with only a base and spring does not disclose every limitation of that claim.",
     "trap": "Don't decide novelty from the invention's title, abstract, or general purpose. Compare the actual claimed features.",
@@ -67,7 +120,33 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-003",
     "day": 3,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Claim limitation",
+        "meaning": "One required feature or condition written into a patent claim."
+      },
+      {
+        "term": "Independent claim",
+        "meaning": "A claim that stands on its own without referring back to another claim."
+      },
+      {
+        "term": "Dependent claim",
+        "meaning": "A claim that refers to an earlier claim and adds another requirement."
+      },
+      {
+        "term": "Prior art",
+        "meaning": "Qualifying earlier information or activity considered when deciding if an invention is patentable."
+      },
+      {
+        "term": "Anticipation",
+        "meaning": "A novelty problem when one qualifying earlier source discloses every feature of the claim."
+      }
+    ],
+    "reviewTerms": [
+      "Utility patent",
+      "Design patent"
+    ]
   },
   {
     "title": "Specifications and drawings",
@@ -90,7 +169,33 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-004",
     "day": 4,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Specification",
+        "meaning": "The detailed written explanation of the invention in an application."
+      },
+      {
+        "term": "Disclosure",
+        "meaning": "The information actually explained or shown in the application."
+      },
+      {
+        "term": "Abstract",
+        "meaning": "A brief technical summary; it does not replace the claims."
+      },
+      {
+        "term": "New matter",
+        "meaning": "New technical information introduced later that was not in the original application."
+      },
+      {
+        "term": "Written description",
+        "meaning": "A requirement that the original application show the inventor had possession of the claimed invention."
+      }
+    ],
+    "reviewTerms": [
+      "Claim limitation",
+      "Independent claim"
+    ]
   },
   {
     "title": "From filing to issuance",
@@ -113,7 +218,37 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-005",
     "day": 5,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Patent prosecution",
+        "meaning": "The back-and-forth process of examining and responding to a pending patent application."
+      },
+      {
+        "term": "Examiner",
+        "meaning": "The USPTO official who reviews the application and its claims."
+      },
+      {
+        "term": "Office action",
+        "meaning": "A written communication from the examiner about rejections, objections, or other matters."
+      },
+      {
+        "term": "Rejection",
+        "meaning": "An examiner's conclusion that a claim fails a patentability requirement."
+      },
+      {
+        "term": "Notice of allowance",
+        "meaning": "A notice that the claims have been allowed, usually before issuance formalities are complete."
+      },
+      {
+        "term": "Final rejection",
+        "meaning": "An Office action with restrictions on further changes, not necessarily the end of all options."
+      }
+    ],
+    "reviewTerms": [
+      "Specification",
+      "Disclosure"
+    ]
   },
   {
     "title": "What kinds of ideas qualify?",
@@ -136,7 +271,33 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-006",
     "day": 6,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Patent eligibility",
+        "meaning": "Whether the claimed subject is the kind of invention patent law can protect under §101."
+      },
+      {
+        "term": "Statutory category",
+        "meaning": "One of the types Congress listed in §101: process, machine, manufacture or composition of matter."
+      },
+      {
+        "term": "Judicial exception",
+        "meaning": "Subject matter such as an abstract idea, law of nature, or natural phenomenon that requires special eligibility analysis."
+      },
+      {
+        "term": "Novelty",
+        "meaning": "Whether the claim is new compared with the qualifying prior art."
+      },
+      {
+        "term": "Obviousness",
+        "meaning": "Whether the claim would have been an evident development to a skilled person from prior art."
+      }
+    ],
+    "reviewTerms": [
+      "Patent prosecution",
+      "Examiner"
+    ]
   },
   {
     "title": "Abstract ideas and practical uses",
@@ -159,7 +320,25 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-007",
     "day": 7,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Practical application",
+        "meaning": "A concrete use of a judicial exception in a claim that may matter to eligibility."
+      },
+      {
+        "term": "Abstract idea",
+        "meaning": "A category of judicial exception that may include certain mathematical concepts and mental processes."
+      },
+      {
+        "term": "Law of nature",
+        "meaning": "A naturally operating relationship or principle, rather than a human-made invention by itself."
+      }
+    ],
+    "reviewTerms": [
+      "Patent eligibility",
+      "Statutory category"
+    ]
   },
   {
     "title": "Prior art, in everyday language",
@@ -182,7 +361,29 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-008",
     "day": 8,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Effective filing date",
+        "meaning": "The legally relevant filing date for the particular claimed invention, accounting for priority and benefit."
+      },
+      {
+        "term": "Public disclosure",
+        "meaning": "Making information available to the public, such as publishing or demonstrating technology."
+      },
+      {
+        "term": "Priority",
+        "meaning": "A legal basis for relying on an earlier filing date when applicable requirements are satisfied."
+      },
+      {
+        "term": "Prior art reference",
+        "meaning": "A particular document or other source that can be cited against claims."
+      }
+    ],
+    "reviewTerms": [
+      "Practical application",
+      "Abstract idea"
+    ]
   },
   {
     "title": "Novelty: was it already disclosed?",
@@ -205,7 +406,25 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-009",
     "day": 9,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "35 U.S.C. §102",
+        "meaning": "The main U.S. statutory section governing novelty and certain prior-art rules."
+      },
+      {
+        "term": "Inherency",
+        "meaning": "A feature that necessarily exists in what an earlier source teaches, even if it isn't stated."
+      },
+      {
+        "term": "Single-reference anticipation",
+        "meaning": "When one qualifying prior-art source contains all claim limitations, expressly or inherently."
+      }
+    ],
+    "reviewTerms": [
+      "Effective filing date",
+      "Public disclosure"
+    ]
   },
   {
     "title": "The inventor's disclosure grace period",
@@ -228,7 +447,25 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-010",
     "day": 10,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Grace period",
+        "meaning": "An exception under certain rules for specified inventor-originated disclosures made near filing."
+      },
+      {
+        "term": "Inventor-originated disclosure",
+        "meaning": "Information disclosed by the inventor or obtained from the inventor, under applicable rules."
+      },
+      {
+        "term": "AIA",
+        "meaning": "America Invents Act, the law underlying many modern U.S. filing and prior-art rules."
+      }
+    ],
+    "reviewTerms": [
+      "35 U.S.C. §102",
+      "Inherency"
+    ]
   },
   {
     "title": "Obviousness: even if it's new",
@@ -251,7 +488,29 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-011",
     "day": 11,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "35 U.S.C. §103",
+        "meaning": "The U.S. statutory section governing obviousness."
+      },
+      {
+        "term": "Person of ordinary skill",
+        "meaning": "A hypothetical worker with ordinary skill and knowledge in the invention's technical field."
+      },
+      {
+        "term": "Combination of references",
+        "meaning": "Using teachings from multiple prior-art sources in an obviousness analysis."
+      },
+      {
+        "term": "Objective evidence",
+        "meaning": "Real-world evidence relevant to obviousness, such as unexpected results or certain commercial success."
+      }
+    ],
+    "reviewTerms": [
+      "Grace period",
+      "Inventor-originated disclosure"
+    ]
   },
   {
     "title": "Why would an engineer combine two ideas?",
@@ -274,7 +533,25 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-012",
     "day": 12,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Reason to combine",
+        "meaning": "An evidence-supported explanation for why a skilled person would combine earlier teachings."
+      },
+      {
+        "term": "KSR",
+        "meaning": "A U.S. Supreme Court decision emphasizing flexible, fact-supported obviousness reasoning."
+      },
+      {
+        "term": "Graham factors",
+        "meaning": "Factual inquiries used in obviousness analysis, including prior art, differences, skill level and objective evidence."
+      }
+    ],
+    "reviewTerms": [
+      "35 U.S.C. §103",
+      "Person of ordinary skill"
+    ]
   },
   {
     "title": "Teaching away and unexpected results",
@@ -297,7 +574,25 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-013",
     "day": 13,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Teaching away",
+        "meaning": "Prior art discourages or criticizes a particular technical approach."
+      },
+      {
+        "term": "Unexpected results",
+        "meaning": "Technical performance that a skilled person would not reasonably predict; it may bear on obviousness."
+      },
+      {
+        "term": "Nexus",
+        "meaning": "A meaningful connection between evidence, such as unexpected results, and the invention actually claimed."
+      }
+    ],
+    "reviewTerms": [
+      "Reason to combine",
+      "KSR"
+    ]
   },
   {
     "title": "Explaining an invention well enough",
@@ -320,7 +615,29 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-014",
     "day": 14,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "35 U.S.C. §112",
+        "meaning": "A statute governing disclosure and claim requirements."
+      },
+      {
+        "term": "Enablement",
+        "meaning": "Teaching a skilled person how to make and use the full claimed invention without undue experimentation."
+      },
+      {
+        "term": "Definiteness",
+        "meaning": "How clearly the claim states its boundaries so others can tell what is covered."
+      },
+      {
+        "term": "Undue experimentation",
+        "meaning": "Excessive trial and error needed to practice the claimed invention despite the disclosure."
+      }
+    ],
+    "reviewTerms": [
+      "Teaching away",
+      "Unexpected results"
+    ]
   },
   {
     "title": "Provisional applications and priority",
@@ -343,6 +660,28 @@ window.PATENT_DAILY_LESSONS=[
     ],
     "id": "DL-015",
     "day": 15,
-    "minutes": 10
+    "minutes": 10,
+    "vocabulary": [
+      {
+        "term": "Provisional application",
+        "meaning": "An initial U.S. filing that can support an earlier benefit date but is not examined into a patent."
+      },
+      {
+        "term": "Nonprovisional application",
+        "meaning": "The application type that is generally examined for patentability toward a patent grant."
+      },
+      {
+        "term": "Continuation",
+        "meaning": "A related later application that does not add new technical disclosure."
+      },
+      {
+        "term": "Continuation-in-part",
+        "meaning": "A related later application that adds new technical disclosure."
+      }
+    ],
+    "reviewTerms": [
+      "35 U.S.C. §112",
+      "Enablement"
+    ]
   }
 ];
