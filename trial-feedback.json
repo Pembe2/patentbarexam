@@ -39,6 +39,19 @@
       "notes": "The unfamiliar terms window contained critical information needed to answer questions. Terms such as specification and prior art were not adequately taught in the learning section. Teach all necessary concepts before questions.",
       "source": "user submitted evaluation",
       "loggedOn": "2026-11-21"
+    },
+    {
+      "lesson": 4,
+      "ratings": {
+        "terminology": "Somewhat",
+        "engineeringExample": "Somewhat",
+        "questionPreparation": "Somewhat",
+        "answerExplanations": "Yes",
+        "length": "Somewhat"
+      },
+      "notes": "The learning section did not state which statutory provision addresses written description and enablement, although question 3 asked that. Add the rule and explain 35 U.S.C. §112(a) before testing.",
+      "source": "user submitted evaluation",
+      "loggedOn": "2026-11-21"
     }
   ]
 }
