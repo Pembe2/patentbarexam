@@ -44,9 +44,9 @@ function renderIndex(){
  app.innerHTML='<div class="card daily-start"><div class="flex" style="justify-content:space-between"><strong>Your foundation course</strong><span class="pill">'+doneCount()+' / '+lessons.length+' completed</span></div>'+
  '<div class="bar"><div style="width:'+pct+'%"></div></div>'+
  (l?'<h2 style="margin-top:18px">Up next: '+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><p class="small muted">≈ 10 minutes. Read, see a practical example, answer three questions and recap.</p><button class="btn" id="dailyStart">Start lesson '+l.day+' →</button>':'<h2 style="margin-top:18px">All 15 lessons completed!</h2><p>Review any lesson below. Your completed lessons remain available.</p>')+'</div>'+
- '<h3 style="margin:23px 0 12px">Your lessons</h3><div class="daily-lesson-list">'+lessons.map(x=>'<button type="button" class="daily-list-item '+(d.completed[x.id]?'complete':'')+'" data-daily-id="'+safe(x.id)+'"><span class="daily-list-number">'+(d.completed[x.id]?'✓':x.day)+'</span><span><strong>'+safe(x.title)+'</strong><small>'+safe(x.tag)+'</small></span><span class="muted">›</span></button>').join('')+'</div>';
+ '<h3 style="margin:23px 0 12px">Your lessons</h3><div class="daily-lesson-list">'+lessons.map(x=>'<button type="button" class="daily-list-item '+(d.completed[x.id]?'complete':'')+'" '+(!d.completed[x.id]&&l&&x.day>l.day?'disabled aria-label="Locked — complete earlier lessons first"':'')+' data-daily-id="'+safe(x.id)+'"><span class="daily-list-number">'+(d.completed[x.id]?'✓':x.day)+'</span><span><strong>'+safe(x.title)+'</strong><small>'+safe(x.tag)+'</small></span><span class="muted">›</span></button>').join('')+'</div>';
  if(l)app.querySelector('#dailyStart').addEventListener('click',()=>start(l.id));
- app.querySelectorAll('[data-daily-id]').forEach(x=>x.addEventListener('click',()=>start(x.dataset.dailyId)));
+ app.querySelectorAll('[data-daily-id]:not(:disabled)').forEach(x=>x.addEventListener('click',()=>start(x.dataset.dailyId)));
 }
 function openDaily(){selected=null;goDaily();renderIndex()}
 function start(id){selected=lessons.find(l=>l.id===id);if(!selected)return;phase=0;questionIndex=0;correctCount=0;answered=false;goDaily();renderStep()}
