@@ -100,6 +100,63 @@ button,a,select{touch-action:manipulation}
 .plain-english-panel h4{font-size:17px;line-height:1.4;margin:0 0 10px;color:#244782}
 .plain-english-panel .lesson-paragraph{margin:9px 0;line-height:1.65}
 @media(max-width:650px){.plain-english-panel{padding:13px 11px}.plain-english-panel h4{font-size:16px}}
+
+/* Daily foundation lessons */
+.daily-banner{background:linear-gradient(118deg,#e9f1ff,#f8fbff);border:1px solid #cddcf6;border-radius:18px;padding:20px 22px;margin:16px 0 22px}
+.daily-banner-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;color:#2752a1;font-size:13px}
+.daily-banner h2{margin:12px 0 7px;font-size:23px}
+.daily-banner p{color:#41536e;margin:0 0 14px;line-height:1.55}
+.daily-banner-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.daily-banner-actions span{margin-right:auto;color:#566783}
+.daily-banner.daily-dismissed{background:#f5f7fc;padding:14px 18px}
+.daily-banner.daily-dismissed h2,.daily-banner.daily-dismissed p{display:none}
+.daily-banner.daily-dismissed .daily-banner-actions{margin-top:10px}
+.daily-work{max-width:850px;margin-top:18px}
+.daily-title h2{font-size:27px;margin:7px 0}
+.daily-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:18px 0 24px}
+.daily-steps span{text-align:center;font-size:12px;background:#eef1f6;border-radius:8px;padding:9px 3px;color:#607089}
+.daily-steps span.active{background:#dce8ff;color:#254b9b;font-weight:800}
+.daily-steps span.done{background:#e5f6ec;color:#176e4d}
+.daily-reading{font-size:16px;line-height:1.75;max-width:720px}
+.daily-reading p{margin:14px 0}
+.daily-def{font-weight:600;color:#223d6c;font-size:18px}
+.daily-term{font-size:14px;background:#f0f5ff;padding:11px 14px;border-left:3px solid #4778e2;border-radius:8px}
+.daily-note{padding:13px 15px;margin:20px 0;background:#f3f7ff;border:1px solid #dbe5f7;border-radius:10px;font-size:15px;line-height:1.65}
+.daily-controls{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:25px}
+.daily-question-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.daily-question-text{font-size:21px;margin:18px 0}
+.daily-answer-list{display:grid;gap:10px}
+.daily-answer{width:100%}
+.daily-answer-feedback{margin:20px 0;padding:17px;border:1px solid #d7e2ee;border-radius:13px;line-height:1.6;background:#f7faff;overflow-wrap:anywhere}
+.daily-answer-feedback.good{background:#f0faf3;border-color:#c0e5cd}
+.daily-answer-feedback.bad{background:#fff7f4;border-color:#f0d0c2}
+.daily-other-choices{padding-top:10px;margin-top:15px;border-top:1px solid #dae0e9}
+.daily-other-choices p{margin:9px 0;font-size:14px}
+.daily-start{max-width:850px}
+.daily-lesson-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.daily-list-item{display:flex;align-items:center;gap:12px;border:1px solid #dbe2ed;border-radius:12px;background:white;text-align:left;padding:14px;min-width:0;cursor:pointer;color:#243650}
+.daily-list-item:hover{border-color:#356be8;background:#f8faff}
+.daily-list-item>span:nth-child(2){flex:1;min-width:0}
+.daily-list-item small{display:block;font-size:12px;color:#61718a;margin-top:4px}
+.daily-list-number{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:9px;background:#eaf0ff;color:#2755b7;font-weight:800}
+.daily-list-item.complete .daily-list-number{background:#e5f6ec;color:#16805a}
+.daily-completed-message{border:1px solid #b5dfc6;background:#edfaf2;color:#146b48;padding:14px;border-radius:11px;margin:0 0 14px;font-weight:700}
+@media(max-width:650px){
+ .daily-banner{padding:16px 14px;border-radius:14px}
+ .daily-banner h2{font-size:20px}
+ .daily-banner-actions{align-items:stretch}
+ .daily-banner-actions span{width:100%}
+ .daily-banner-actions button{flex:1 1 140px;justify-content:center}
+ .daily-title h2{font-size:23px}
+ .daily-steps span{font-size:11px;padding:8px 1px}
+ .daily-reading{font-size:15px}
+ .daily-def{font-size:17px}
+ .daily-lesson-list{grid-template-columns:minmax(0,1fr)}
+ .daily-controls{align-items:stretch}
+ .daily-controls .btn{flex:1 1 130px;justify-content:center;text-align:center}
+ .daily-question-text{font-size:18px}
+ .daily-work{padding:17px 14px}
+}
 </style>
 </head>
 <body><div class="shell"><aside class="side"><div class="brand"><span class="logo">§</span><span>PATENT BAR<br>STUDY HUB</span></div><div class="tiny">Workspace</div><div class="nav-wrap"><button class="nav active" data-view="dashboard"><span>▦</span>Dashboard</button><button class="nav" data-view="learn"><span>▤</span>Study modules</button><button class="nav" data-view="practice"><span>✎</span>Practice questions</button><button class="nav" data-view="flashcards"><span>▣</span>Flashcards</button><button class="nav" data-view="planner"><span>◷</span>Study plan</button><button class="nav" data-view="resources"><span>↗</span>Resources</button></div><div class="side-note"><strong>Built around official sources</strong><br>USPTO registration exam updated September 23, 2026.<br>Primary reference: MPEP 9th Ed., Rev. 01.2024.</div></aside><main class="main">
@@ -183,4 +240,4 @@ function exportData(){let blob=new Blob([JSON.stringify({app:'patent-bar-study-h
 function importData(event){let f=event.target.files[0];if(!f)return;let reader=new FileReader();reader.onload=()=>{try{let x=JSON.parse(reader.result);if(x.app!=='patent-bar-study-hub'||!x.data||typeof x.data!=='object')throw Error();if(!confirm('Replace current progress with this backup?'))return;progress={completed:{},attempts:[],mastered:{},weeks:{},notes:'',...x.data};save();init();alert('Progress restored.')}catch(e){alert('Could not read a valid study hub backup.')}};reader.readAsText(f);event.target.value=''}
 function init(){let topicOptions='<option value="all">All topics</option>'+modules.map(m=>`<option value="${m.id}">${m.title}</option>`).join('');document.getElementById('quizTopic').innerHTML=topicOptions;document.getElementById('cardTopic').innerHTML=topicOptions;document.getElementById('notes').value=progress.notes||'';renderModules();updateMetrics();renderWeeks();resetCards()}
 document.getElementById('notes').addEventListener('input',e=>{progress.notes=e.target.value;save()});init();
-</script><script src="questions-extra.js"></script><script src="smart-study.js"></script><script src="feedback-original.js"></script><script src="feedback-21-45.js"></script><script src="feedback-46-70.js"></script><script src="plain-english-lessons.js"></script><script src="answer-lessons.js"></script></body></html>
+</script><script src="questions-extra.js"></script><script src="smart-study.js"></script><script src="feedback-original.js"></script><script src="feedback-21-45.js"></script><script src="feedback-46-70.js"></script><script src="plain-english-lessons.js"></script><script src="answer-lessons.js"></script><script src="daily-lessons-data.js"></script><script src="daily-learning.js"></script></body></html>
