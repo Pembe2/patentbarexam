@@ -57,6 +57,19 @@ function choicesBreakdown(q,selected){
  });
  return section;
 }
+function plainEnglishPanel(q){
+ const library=window.PATENT_PLAIN_LESSONS;
+ if(!library)return null;
+ const info=(library.byId&&library.byId[String(q.id)])||(library.topic&&library.topic[q.topic]);
+ if(!info)return null;
+ const section=el('section','plain-english-panel');
+ section.append(el('h4','','In plain English: '+info.term));
+ paragraph(section,'What that means:',info.meaning);
+ paragraph(section,'Engineering example:',info.example);
+ paragraph(section,'Exam takeaway:',info.tip);
+ if(info.ref)section.append(el('p','small muted','See also: '+info.ref));
+ return section;
+}
 function makeLesson(q,selected,wasCorrect){
  const info=guides[q.topic]||guides.roadmap;
  const container=el('div','deep-lesson');
@@ -68,6 +81,7 @@ function makeLesson(q,selected,wasCorrect){
  } else {
   paragraph(container,'Why the correct answer works:',q.why);
  }
+ const plain=plainEnglishPanel(q);if(plain)container.append(plain);
  container.append(choicesBreakdown(q,selected));
  const matches=targetedRules.filter(([re])=>re.test(q.q));
  if(matches.length){
