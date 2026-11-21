@@ -170,6 +170,22 @@ body.daily-modal-open{overflow:hidden}
 .daily-modal-actions{display:flex;gap:9px;flex-wrap:wrap;margin:19px 0 14px}
 .daily-modal-actions .btn{justify-content:center;flex:1 1 165px}
 @media(max-width:650px){.daily-modal-backdrop{padding:14px;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}.daily-modal{border-radius:17px;padding:23px 18px;max-height:calc(100dvh - 28px)}.daily-modal h2{font-size:23px}.daily-modal-actions{flex-direction:column}.daily-modal-actions .btn{flex:auto;width:100%;min-height:48px}}
+
+/* Progressive daily vocabulary */
+.daily-vocabulary{margin:8px 0 25px}
+.daily-vocabulary h3{margin:0 0 6px;font-size:19px}
+.daily-vocab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0 18px}
+.daily-vocab-item{background:#eff5ff;border:1px solid #d4e1f6;border-radius:11px;padding:13px 14px;min-width:0}
+.daily-vocab-item strong{display:block;color:#204984;font-size:15px;line-height:1.4}
+.daily-vocab-item p{color:#40516b;font-size:14px;line-height:1.55;margin:5px 0 0}
+.daily-vocab-review,.daily-quiz-glossary{background:#f9fbff;border:1px solid #dbe4f1;padding:11px 13px;border-radius:11px;margin:16px 0}
+.daily-vocab-review summary,.daily-quiz-glossary summary{cursor:pointer;font-size:14px;font-weight:750;color:#2754a2;line-height:1.5}
+.daily-vocab-review .daily-vocab-grid{margin-bottom:0}
+.daily-vocab-mini{padding:10px 12px;background:#fff}
+.daily-quiz-glossary .daily-vocab-item{margin:8px 0}
+.daily-quiz-glossary .daily-vocab-item p{margin:3px 0}
+.daily-recap-words{background:#eff5ff;border-radius:10px;padding:12px;margin:16px 0;font-size:14px;line-height:1.6}
+@media(max-width:650px){.daily-vocab-grid{grid-template-columns:minmax(0,1fr);gap:8px}.daily-vocab-item{padding:11px 12px}.daily-vocab-item strong{font-size:14px}.daily-vocab-item p{font-size:14px}.daily-quiz-glossary{padding:12px}}
 </style>
 </head>
 <body><div class="shell"><aside class="side"><div class="brand"><span class="logo">§</span><span>PATENT BAR<br>STUDY HUB</span></div><div class="tiny">Workspace</div><div class="nav-wrap"><button class="nav active" data-view="dashboard"><span>▦</span>Dashboard</button><button class="nav" data-view="learn"><span>▤</span>Study modules</button><button class="nav" data-view="practice"><span>✎</span>Practice questions</button><button class="nav" data-view="flashcards"><span>▣</span>Flashcards</button><button class="nav" data-view="planner"><span>◷</span>Study plan</button><button class="nav" data-view="resources"><span>↗</span>Resources</button></div><div class="side-note"><strong>Built around official sources</strong><br>USPTO registration exam updated September 23, 2026.<br>Primary reference: MPEP 9th Ed., Rev. 01.2024.</div></aside><main class="main">
