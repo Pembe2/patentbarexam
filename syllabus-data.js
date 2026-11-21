@@ -1,4 +1,4 @@
-/* Official-source topic map with live and planned daily lesson crosslinks. */
+/* MPEP chapter and official-source curriculum coverage, with drafted question links. */
 window.PATENT_SYLLABUS={
   "metadata": {
     "title": "USPTO Patent Bar Master Syllabus",
@@ -89,7 +89,13 @@ window.PATENT_SYLLABUS={
       ],
       "questionIds": [
         10,
-        "PB-0046"
+        "PB-0046",
+        "PB-D026-1",
+        "PB-D026-2",
+        "PB-D026-3",
+        "PB-D030-1",
+        "PB-D030-2",
+        "PB-D030-3"
       ],
       "referenceTopic": "filing",
       "priority": 1
@@ -108,7 +114,16 @@ window.PATENT_SYLLABUS={
       ],
       "questionIds": [
         "PB-0047",
-        "PB-0048"
+        "PB-0048",
+        "PB-D028-1",
+        "PB-D028-2",
+        "PB-D028-3",
+        "PB-D029-1",
+        "PB-D029-2",
+        "PB-D029-3",
+        "PB-D030-1",
+        "PB-D030-2",
+        "PB-D030-3"
       ],
       "referenceTopic": "filing",
       "priority": 1,
@@ -128,7 +143,20 @@ window.PATENT_SYLLABUS={
         29,
         30
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D026-1",
+        "PB-D026-2",
+        "PB-D026-3",
+        "PB-D028-1",
+        "PB-D028-2",
+        "PB-D028-3",
+        "PB-D029-1",
+        "PB-D029-2",
+        "PB-D029-3",
+        "PB-D030-1",
+        "PB-D030-2",
+        "PB-D030-3"
+      ],
       "referenceTopic": "filing",
       "priority": 1
     },
@@ -141,7 +169,11 @@ window.PATENT_SYLLABUS={
       "lessonDays": [
         27
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D027-1",
+        "PB-D027-2",
+        "PB-D027-3"
+      ],
       "referenceTopic": "filing",
       "priority": 1,
       "plannedDays": [
@@ -177,7 +209,19 @@ window.PATENT_SYLLABUS={
         30
       ],
       "questionIds": [
-        "PB-0049"
+        "PB-0049",
+        "PB-D016-1",
+        "PB-D016-2",
+        "PB-D016-3",
+        "PB-D017-1",
+        "PB-D017-2",
+        "PB-D017-3",
+        "PB-D018-1",
+        "PB-D018-2",
+        "PB-D018-3",
+        "PB-D030-1",
+        "PB-D030-2",
+        "PB-D030-3"
       ],
       "referenceTopic": "filing",
       "priority": 1
@@ -193,7 +237,17 @@ window.PATENT_SYLLABUS={
         19,
         30
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D018-1",
+        "PB-D018-2",
+        "PB-D018-3",
+        "PB-D019-1",
+        "PB-D019-2",
+        "PB-D019-3",
+        "PB-D030-1",
+        "PB-D030-2",
+        "PB-D030-3"
+      ],
       "referenceTopic": null,
       "priority": 1
     },
@@ -206,7 +260,11 @@ window.PATENT_SYLLABUS={
       "lessonDays": [
         19
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D019-1",
+        "PB-D019-2",
+        "PB-D019-3"
+      ],
       "referenceTopic": null,
       "priority": 2
     },
@@ -219,7 +277,11 @@ window.PATENT_SYLLABUS={
       "lessonDays": [
         20
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D020-1",
+        "PB-D020-2",
+        "PB-D020-3"
+      ],
       "referenceTopic": null,
       "priority": 1,
       "plannedDays": [
@@ -235,7 +297,11 @@ window.PATENT_SYLLABUS={
       "lessonDays": [
         20
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D020-1",
+        "PB-D020-2",
+        "PB-D020-3"
+      ],
       "referenceTopic": null,
       "priority": 1,
       "plannedDays": [
@@ -270,7 +336,20 @@ window.PATENT_SYLLABUS={
         24,
         25
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D022-1",
+        "PB-D022-2",
+        "PB-D022-3",
+        "PB-D023-1",
+        "PB-D023-2",
+        "PB-D023-3",
+        "PB-D024-1",
+        "PB-D024-2",
+        "PB-D024-3",
+        "PB-D025-1",
+        "PB-D025-2",
+        "PB-D025-3"
+      ],
       "referenceTopic": "filing",
       "priority": 1,
       "plannedDays": [
@@ -323,7 +402,16 @@ window.PATENT_SYLLABUS={
       "questionIds": [
         0,
         "PB-0023",
-        "PB-0024"
+        "PB-0024",
+        "PB-D023-1",
+        "PB-D023-2",
+        "PB-D023-3",
+        "PB-D024-1",
+        "PB-D024-2",
+        "PB-D024-3",
+        "PB-D025-1",
+        "PB-D025-2",
+        "PB-D025-3"
       ],
       "referenceTopic": "roadmap",
       "priority": 1
@@ -342,7 +430,22 @@ window.PATENT_SYLLABUS={
         30
       ],
       "questionIds": [
-        "PB-0049"
+        "PB-0049",
+        "PB-D016-1",
+        "PB-D016-2",
+        "PB-D016-3",
+        "PB-D017-1",
+        "PB-D017-2",
+        "PB-D017-3",
+        "PB-D021-1",
+        "PB-D021-2",
+        "PB-D021-3",
+        "PB-D022-1",
+        "PB-D022-2",
+        "PB-D022-3",
+        "PB-D030-1",
+        "PB-D030-2",
+        "PB-D030-3"
       ],
       "referenceTopic": "filing",
       "priority": 1
@@ -396,7 +499,11 @@ window.PATENT_SYLLABUS={
       "lessonDays": [
         23
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D023-1",
+        "PB-D023-2",
+        "PB-D023-3"
+      ],
       "referenceTopic": null,
       "priority": 2
     },
@@ -546,7 +653,11 @@ window.PATENT_SYLLABUS={
       "lessonDays": [
         28
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D028-1",
+        "PB-D028-2",
+        "PB-D028-3"
+      ],
       "referenceTopic": null,
       "priority": 1,
       "plannedDays": [
@@ -1503,7 +1614,11 @@ window.PATENT_SYLLABUS={
       "lessonDays": [
         20
       ],
-      "questionIds": [],
+      "questionIds": [
+        "PB-D020-1",
+        "PB-D020-2",
+        "PB-D020-3"
+      ],
       "referenceTopic": null,
       "priority": 1,
       "plannedDays": [
