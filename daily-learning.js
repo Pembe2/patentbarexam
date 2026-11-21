@@ -116,7 +116,41 @@ function complete(){
  document.getElementById('dailyApp').prepend(note);
  window.scrollTo(0,0);
 }
+// A real welcome dialog, shown once per local day unless the daily lesson is complete.
+let modal=null;
+function closeDailyPrompt(dismissForToday){
+ if(dismissForToday){
+  const d=stored();
+  d.dismissedDate=localDay();
+  save();
+ }
+ if(modal){modal.remove();modal=null}
+ document.body.classList.remove('daily-modal-open');
+}
+function showDailyPrompt(){
+ if(modal)return;
+ const d=stored(),next=current();
+ if(!next||d.dismissedDate===localDay()||d.lastCompletedDate===localDay())return;
+ modal=document.createElement('div');
+ modal.className='daily-modal-backdrop';
+ modal.setAttribute('role','presentation');
+ modal.innerHTML='<div class="daily-modal" role="dialog" aria-modal="true" aria-labelledby="dailyModalTitle" aria-describedby="dailyModalDesc">'+
+ '<div class="daily-modal-eyebrow">☀ Your daily patent bar lesson</div>'+
+ '<h2 id="dailyModalTitle">Ready for 10 minutes of learning?</h2>'+
+ '<p id="dailyModalDesc">Lesson '+next.day+' of '+lessons.length+': <strong>'+safe(next.title)+'</strong></p>'+
+ '<p class="daily-modal-summary">'+safe(next.definition)+'</p>'+
+ '<div class="daily-modal-actions"><button type="button" id="dailyModalStart" class="btn">Start today’s lesson →</button><button type="button" id="dailyModalLater" class="btn ghost">Maybe later</button></div>'+
+ '<p class="small muted">No pressure — you won’t skip a lesson if you miss a day.</p></div>';
+ document.body.appendChild(modal);
+ document.body.classList.add('daily-modal-open');
+ modal.querySelector('#dailyModalStart').addEventListener('click',()=>{const id=next.id;closeDailyPrompt(false);start(id)});
+ modal.querySelector('#dailyModalLater').addEventListener('click',()=>closeDailyPrompt(true));
+ modal.addEventListener('click',e=>{if(e.target===modal)closeDailyPrompt(true)});
+ modal.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();closeDailyPrompt(true)}});
+ modal.querySelector('#dailyModalStart').focus();
+}
 const oldShowView=showView;
 showView=function(id){oldShowView(id);if(id==='dashboard')renderBanner();};
 renderBanner();
+showDailyPrompt();
 })();
