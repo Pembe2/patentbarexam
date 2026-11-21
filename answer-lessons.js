@@ -39,6 +39,7 @@ function paragraph(target,label,value){
  p.append(strong,document.createTextNode(value));target.append(p);
 }
 function getChoiceRationale(q,index){
+ if(Array.isArray(q.choiceWhy)&&q.choiceWhy[index])return q.choiceWhy[index];
  if(index===q.correct)return q.why;
  const sources=[window.PATENT_FEEDBACK_ORIGINAL,window.PATENT_FEEDBACK_21_45,window.PATENT_FEEDBACK_46_70];
  const list=sources.reduce((found,source)=>found||(source&&source[String(q.id)]),null);
