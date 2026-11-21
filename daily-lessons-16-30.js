@@ -1,4 +1,4 @@
-/* Developed lessons 16–30 with integrated, stable-ID practice questions. */
+/* Daily lessons 16–30: developed content and new concepts. */
 window.PATENT_DAILY_LESSONS.push(...[
   {
     "id": "DL-016",
@@ -38,7 +38,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D016-2",
       "PB-D016-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Inventorship"
   },
   {
     "id": "DL-017",
@@ -78,7 +79,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D017-2",
       "PB-D017-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Joint inventorship"
   },
   {
     "id": "DL-018",
@@ -118,7 +120,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D018-2",
       "PB-D018-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Inventor vs. owner"
   },
   {
     "id": "DL-019",
@@ -158,7 +161,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D019-2",
       "PB-D019-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Assignment recordation"
   },
   {
     "id": "DL-020",
@@ -198,7 +202,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D020-2",
       "PB-D020-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Patent practitioner"
   },
   {
     "id": "DL-021",
@@ -238,7 +243,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D021-2",
       "PB-D021-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Inventor declaration"
   },
   {
     "id": "DL-022",
@@ -278,7 +284,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D022-2",
       "PB-D022-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Application data sheet"
   },
   {
     "id": "DL-023",
@@ -318,7 +325,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D023-2",
       "PB-D023-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Nonprovisional components"
   },
   {
     "id": "DL-024",
@@ -358,7 +366,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D024-2",
       "PB-D024-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Filing receipt"
   },
   {
     "id": "DL-025",
@@ -398,7 +407,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D025-2",
       "PB-D025-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Entity status and fees"
   },
   {
     "id": "DL-026",
@@ -438,7 +448,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D026-2",
       "PB-D026-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Provisional benefit"
   },
   {
     "id": "DL-027",
@@ -478,7 +489,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D027-2",
       "PB-D027-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Foreign priority"
   },
   {
     "id": "DL-028",
@@ -518,7 +530,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D028-2",
       "PB-D028-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Continuation and divisional"
   },
   {
     "id": "DL-029",
@@ -558,7 +571,8 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D029-2",
       "PB-D029-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Continuation-in-part"
   },
   {
     "id": "DL-030",
@@ -598,6 +612,7 @@ window.PATENT_DAILY_LESSONS.push(...[
       "PB-D030-2",
       "PB-D030-3"
     ],
-    "minutes": 10
+    "minutes": 10,
+    "term": "Integrated application review"
   }
 ]);
