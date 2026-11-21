@@ -212,6 +212,44 @@ body.daily-modal-open{overflow:hidden}
 .library-lesson-link small{display:block;font-size:12px;color:#657189;margin-top:3px}
 .library-lesson-link .pill{white-space:nowrap}
 @media(max-width:650px){#moduleList.modules{grid-template-columns:minmax(0,1fr)}.library-controls{padding:14px 12px}.library-lesson-link{flex-wrap:wrap}.library-detail-title{font-size:23px}}
+
+/* Master syllabus audit */
+.syllabus-disclaimer{margin:16px 0;padding:13px 16px;background:#f5f7fb;border:1px solid #dce3ee;border-radius:12px;color:#40516e;line-height:1.55}
+.syllabus-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}
+.syllabus-metrics>div{border:1px solid #e2e7f0;background:#fff;border-radius:12px;padding:14px}
+.syllabus-metrics strong{font-size:27px;display:block;color:#27477f}
+.syllabus-metrics span{display:block;font-size:12px;color:#596883;line-height:1.35;margin-top:3px}
+.syllabus-controls{background:#fff;border:1px solid #e1e7f0;border-radius:14px;padding:16px 18px;margin:14px 0 22px}
+.syllabus-controls label{display:block;font-weight:700;font-size:13px;margin:8px 0 6px}
+.syllabus-controls input,.syllabus-controls select{height:46px;width:100%;max-width:730px;border:1px solid #cbd5e3;border-radius:9px;background:#fff;padding:10px 12px;color:#273752;font-size:16px}
+.syllabus-filter-buttons{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0 16px}
+.syllabus-filter.selected{background:#2857b3;color:#fff;border-color:#2857b3}
+.syllabus-chapters{display:grid;gap:15px}
+.syllabus-chapter{background:white;border:1px solid #dce3ee;border-radius:14px;overflow:hidden}
+.syllabus-chapter-heading{padding:15px 18px;border-bottom:1px solid #e2e7f0;background:#f7f9fd;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.syllabus-chapter-heading h2{margin:0;font-size:18px;color:#234780}
+.syllabus-chapter-heading span{font-size:13px;color:#596c89;flex:1 1 210px}
+.syllabus-chapter-heading small{color:#5c6c82;font-size:12px}
+.syllabus-item{border-top:1px solid #e9edf4}
+.syllabus-item:first-of-type{border-top:0}
+.syllabus-item summary{list-style:none;cursor:pointer;padding:15px 17px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.syllabus-item summary::-webkit-details-marker{display:none}
+.syllabus-item summary:focus-visible{outline:3px solid #4f83ed;outline-offset:-3px}
+.syllabus-item-title{flex:1;min-width:0}
+.syllabus-item-title strong{display:block;font-size:14px;line-height:1.45;color:#263750}
+.syllabus-item-title small{display:block;font-size:12px;color:#687891;margin-top:5px}
+.syllabus-status{display:inline-flex;justify-content:center;text-align:center;border:1px solid #e4e7ed;border-radius:50px;padding:5px 9px;color:#535f73;background:#f4f5f8;font-size:11px;line-height:1.3;white-space:nowrap}
+.syllabus-status.introduced{background:#eef7f1;border-color:#c9e8d4;color:#23704b}
+.syllabus-status.partial{background:#fffaed;border-color:#f1e0b2;color:#876523}
+.syllabus-expanded{padding:0 17px 18px;color:#3a4b68;font-size:14px}
+.syllabus-expanded p{line-height:1.6}
+.syllabus-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:14px}
+.syllabus-link{background:#edf3ff;border:1px solid #d2e0fa;color:#2752a0;padding:8px 11px;border-radius:8px;cursor:pointer;font-weight:650;text-align:left;font-size:13px}
+.syllabus-link:hover{background:#dbe9ff}
+.syllabus-sources{margin:22px 0}
+.syllabus-sources p{margin:12px 0}
+.syllabus-sources small{display:block;color:#6b7890;margin-top:3px}
+@media(max-width:750px){.syllabus-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.syllabus-metrics>div{padding:12px}.syllabus-item summary{align-items:flex-start;flex-wrap:wrap;gap:8px}.syllabus-status{white-space:normal}.syllabus-chapter-heading{padding:13px 14px}.syllabus-controls{padding:14px 12px}}
 </style>
 </head>
 <body><div class="shell"><aside class="side"><div class="brand"><span class="logo">§</span><span>PATENT BAR<br>STUDY HUB</span></div><div class="tiny">Workspace</div><div class="nav-wrap"><button class="nav active" data-view="dashboard"><span>▦</span>Dashboard</button><button class="nav" data-view="learn"><span>▤</span>Reference Library</button><button class="nav" data-view="practice"><span>✎</span>Practice questions</button><button class="nav" data-view="flashcards"><span>▣</span>Flashcards</button><button class="nav" data-view="planner"><span>◷</span>Study plan</button><button class="nav" data-view="resources"><span>↗</span>Resources</button></div><div class="side-note"><strong>Built around official sources</strong><br>USPTO registration exam updated September 23, 2026.<br>Primary reference: MPEP 9th Ed., Rev. 01.2024.</div></aside><main class="main">
@@ -295,4 +333,4 @@ function exportData(){let blob=new Blob([JSON.stringify({app:'patent-bar-study-h
 function importData(event){let f=event.target.files[0];if(!f)return;let reader=new FileReader();reader.onload=()=>{try{let x=JSON.parse(reader.result);if(x.app!=='patent-bar-study-hub'||!x.data||typeof x.data!=='object')throw Error();if(!confirm('Replace current progress with this backup?'))return;progress={completed:{},attempts:[],mastered:{},weeks:{},notes:'',...x.data};save();init();alert('Progress restored.')}catch(e){alert('Could not read a valid study hub backup.')}};reader.readAsText(f);event.target.value=''}
 function init(){let topicOptions='<option value="all">All topics</option>'+modules.map(m=>`<option value="${m.id}">${m.title}</option>`).join('');document.getElementById('quizTopic').innerHTML=topicOptions;document.getElementById('cardTopic').innerHTML=topicOptions;document.getElementById('notes').value=progress.notes||'';renderModules();updateMetrics();renderWeeks();resetCards()}
 document.getElementById('notes').addEventListener('input',e=>{progress.notes=e.target.value;save()});init();
-</script><script src="questions-extra.js"></script><script src="smart-study.js"></script><script src="feedback-original.js"></script><script src="feedback-21-45.js"></script><script src="feedback-46-70.js"></script><script src="plain-english-lessons.js"></script><script src="answer-lessons.js"></script><script src="daily-lessons-data.js"></script><script src="daily-learning.js"></script><script src="reference-library.js"></script></body></html>
+</script><script src="questions-extra.js"></script><script src="smart-study.js"></script><script src="feedback-original.js"></script><script src="feedback-21-45.js"></script><script src="feedback-46-70.js"></script><script src="plain-english-lessons.js"></script><script src="answer-lessons.js"></script><script src="daily-lessons-data.js"></script><script src="daily-learning.js"></script><script src="reference-library.js"></script><script src="syllabus-data.js"></script><script src="syllabus-dashboard.js"></script></body></html>
