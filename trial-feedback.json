@@ -1,0 +1,18 @@
+{
+  "description": "Manual feedback from initial Patent Bar Study Hub evaluation. Not loaded by production site.",
+  "evaluations": [
+    {
+      "lesson": 1,
+      "ratings": {
+        "terminology": "Yes",
+        "engineeringExample": "Somewhat",
+        "questionPreparation": "Yes",
+        "answerExplanations": "Yes",
+        "length": "Yes"
+      },
+      "notes": "",
+      "source": "user submitted evaluation",
+      "loggedOn": "2026-11-21"
+    }
+  ]
+}
