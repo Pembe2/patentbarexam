@@ -1,4 +1,4 @@
-/* Structured instruction for all 30 available daily lessons. */
+/* Expanded instructor-style teaching, worked steps and prerequisites for all 30 published lessons. */
 window.PATENT_LESSON_ENRICHMENT={
   "1": {
     "rule": "A U.S. utility patent is a limited right to exclude others from making, using, offering to sell, selling, or importing what its claims cover. It is not a general permission to manufacture a product.",
@@ -117,7 +117,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "Congress names four categories: process, machine, manufacture, and composition of matter. A useful improvement may fall within one.",
       "A mathematical equation by itself can raise an abstract-idea issue; merely saying 'use a computer' may not resolve it.",
-      "Section 101 concerns eligibility. Section 102 concerns novelty, § 103 obviousness, and § 112 disclosure and claim requirements. A claim can pass one and fail another."
+      "Section 101 concerns eligibility. Section 102 concerns novelty, § 103 obviousness, and § 112 disclosure and claim requirements. A claim can pass one and fail another.",
+      "A claim that fits a statutory category still needs a full eligibility analysis, especially when it recites a judicial exception.",
+      "A process is a method with steps; a machine is a functioning apparatus; a manufacture is an article made by human effort; a composition of matter is a substance or mixture."
     ],
     "worked": [
       "A pump is a machine, a technique for controlling it can be a process, and a new alloy can be a composition of matter.",
@@ -125,7 +127,9 @@ window.PATENT_LESSON_ENRICHMENT={
       "Even an eligible pump claim could be anticipated by an earlier manual. Eligibility is not a promise of patentability."
     ],
     "before": [
-      "§101 = eligibility; §102 = novelty; §103 = obviousness; §112 = disclosure and claims."
+      "§101 = eligibility; §102 = novelty; §103 = obviousness; §112 = disclosure and claims.",
+      "Before selecting an answer, identify the claim features and the specific legal issue being tested.",
+      "If a question presents earlier work, check its qualifying status and relevant dates rather than assuming all earlier work is prior art."
     ]
   },
   "7": {
@@ -133,7 +137,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "An abstract idea might include certain mathematical concepts. Naturally occurring materials as they exist in nature may raise a natural-phenomenon issue.",
       "Don't decide eligibility based on a single word such as 'computer' or 'formula.' Examine what the claim actually requires and whether the rest of the claim integrates an exception into a practical application.",
-      "Eligibility doesn't necessarily determine whether the invention is new or sufficiently disclosed. Those are separate requirements."
+      "Eligibility doesn't necessarily determine whether the invention is new or sufficiently disclosed. Those are separate requirements.",
+      "A law of nature describes how the physical world behaves; an abstract idea may be a mental process or mathematical concept. Neither automatically qualifies as a patentable invention by itself.",
+      "'Practical application' is not a magic phrase: compare the actual physical or technical limitations with a claim that merely states the exception and asks for a result."
     ],
     "worked": [
       "Claim A merely states an equation for estimating heat loss.",
@@ -142,7 +148,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "Judicial exceptions include abstract ideas, natural phenomena, and laws of nature.",
-      "A practical application requires analyzing the actual claim limitations."
+      "A practical application requires analyzing the actual claim limitations.",
+      "Use the actual claimed features and relevant statutory provision to decide; do not answer from the invention's name alone."
     ]
   },
   "8": {
@@ -150,7 +157,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "An earlier patent document is one possible form of prior art. Published articles, publicly accessible manuals, public use, sales, and certain earlier-filed U.S. patent documents may matter under the relevant statutory provisions.",
       "An effective filing date is the date legally relevant to the particular claimed invention, not always simply today's application date.",
-      "Not every item with an earlier date qualifies automatically. You may need to evaluate availability to the public, the type and date of document, and statutory exceptions."
+      "Not every item with an earlier date qualifies automatically. You may need to evaluate availability to the public, the type and date of document, and statutory exceptions.",
+      "An earlier publication can be prior art even when the inventor never read it. That is why a novelty inquiry often starts with research rather than someone's personal recollection.",
+      "Patent documents can have dates for filing, priority, publication and issue. These dates serve different legal roles and should not be casually substituted for one another."
     ],
     "worked": [
       "A January manual shows the special gasket that you file for in July. If the manual was qualifying public prior art, the July filing can't ignore it.",
@@ -159,7 +168,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "Prior art can be more than a patent.",
-      "Effective filing dates matter, and exceptions can matter too."
+      "Effective filing dates matter, and exceptions can matter too.",
+      "Use the actual claimed features and relevant statutory provision to decide; do not answer from the invention's name alone."
     ]
   },
   "9": {
@@ -167,7 +177,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "Write each required feature in the claim as a checklist. Find one prior-art reference and look for each item in that same source.",
       "A feature can be inherent when it necessarily results from what the source teaches. Something that could merely happen is not enough.",
-      "Combining a feature from Document A and a different feature from Document B generally raises a §103 obviousness question, not ordinary one-reference anticipation."
+      "Combining a feature from Document A and a different feature from Document B generally raises a §103 obviousness question, not ordinary one-reference anticipation.",
+      "Under ordinary anticipation analysis, the same reference must describe the limitations arranged as required by the claim, subject to the applicable legal standard.",
+      "Inherency is strict. Ask whether the missing feature must necessarily be present, rather than whether it could be or would likely be present in some implementations."
     ],
     "worked": [
       "Claim: bracket with a base, hinge, and adjustable spring.",
@@ -177,7 +189,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "Anticipation = all limitations in one qualifying source.",
-      "Inherency requires necessity, not mere possibility."
+      "Inherency requires necessity, not mere possibility.",
+      "Use the actual claimed features and relevant statutory provision to decide; do not answer from the invention's name alone."
     ]
   },
   "10": {
@@ -185,7 +198,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "An inventor's own qualifying public disclosure in the one year before the effective filing date may fit an exception under §102(b)(1).",
       "The same result is not assured for unrelated third-party disclosures or for every kind of earlier U.S. patent filing.",
-      "Identify who disclosed, what they disclosed, the actual disclosure date, and the claim's effective filing date before applying an exception."
+      "Identify who disclosed, what they disclosed, the actual disclosure date, and the claim's effective filing date before applying an exception.",
+      "A public demonstration or article by the inventor can still need careful legal analysis; what was actually made publicly available matters.",
+      "There are different categories of §102 prior art with different exceptions. You will learn the detailed date-based distinctions later; for now, don't treat one year as a universal safe harbor."
     ],
     "worked": [
       "An engineer publicly demonstrates a coupling and files for it eight months later.",
@@ -194,7 +209,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "Grace period ≠ universal exemption.",
-      "Check dates and disclosure origin under §102(b)."
+      "Check dates and disclosure origin under §102(b).",
+      "Use the actual claimed features and relevant statutory provision to decide; do not answer from the invention's name alone."
     ]
   },
   "11": {
@@ -202,7 +218,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "A claim can be novel without being nonobvious. Two familiar elements may be joined for an expected improvement that skilled practitioners would predict.",
       "The Graham inquiries include the scope and content of prior art, the differences between the art and the claim, the ordinary skill level, and relevant objective evidence.",
-      "Multiple references can be used, but the examiner must explain supported reasoning; the conclusion cannot rely only on hindsight."
+      "Multiple references can be used, but the examiner must explain supported reasoning; the conclusion cannot rely only on hindsight.",
+      "The hypothetical person of ordinary skill is not the inventor after seeing the invention. The analysis asks what a typical skilled person would have understood at the relevant time.",
+      "Commercial success or unexpected results may be relevant when tied to the claimed invention, but are not shortcuts that skip the underlying facts."
     ],
     "worked": [
       "A thermostat and automatic vent are separately known.",
@@ -210,7 +228,9 @@ window.PATENT_LESSON_ENRICHMENT={
       "Analyze the prior art and expected result; commercial success alone does not automatically decide the question."
     ],
     "before": [
-      "§102: one-reference novelty; §103: skilled-person obviousness."
+      "§102: one-reference novelty; §103: skilled-person obviousness.",
+      "Before selecting an answer, identify the claim features and the specific legal issue being tested.",
+      "If a question presents earlier work, check its qualifying status and relevant dates rather than assuming all earlier work is prior art."
     ]
   },
   "12": {
@@ -218,7 +238,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "The KSR decision emphasizes a flexible approach rather than only rigid formulas for teaching, suggestion, or motivation.",
       "Ask what technical problem a skilled person was trying to solve, what options were known, and whether the combination was predictable.",
-      "Graham factors structure the factual inquiry; reasons to combine must relate to facts, not just what seems obvious once you've seen the inventor's solution."
+      "Graham factors structure the factual inquiry; reasons to combine must relate to facts, not just what seems obvious once you've seen the inventor's solution.",
+      "A reason to combine may involve improving a similar device in a known way, known technical needs, or other rationales supported by evidence.",
+      "An examiner should identify the differences between the cited prior art and the claim and explain why those differences would have been obvious."
     ],
     "worked": [
       "Manual A shows a vibration sensor; Manual B shows a shutdown controller.",
@@ -227,7 +249,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "KSR = flexible and evidence-based approach.",
-      "Graham = foundational factual inquiries."
+      "Graham = foundational factual inquiries.",
+      "Use the actual claimed features and relevant statutory provision to decide; do not answer from the invention's name alone."
     ]
   },
   "13": {
@@ -235,7 +258,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "Teaching away occurs when a reference discourages a technical approach; merely describing a different preference may not qualify.",
       "Unexpected results can support nonobviousness when they are shown with appropriate evidence and relate to the claimed subject matter.",
-      "Nexus means the asserted real-world evidence has a meaningful relationship to the actual claimed invention."
+      "Nexus means the asserted real-world evidence has a meaningful relationship to the actual claimed invention.",
+      "The claimed technical feature needs to be linked to the unexpected result. If the result comes from an unclaimed marketing feature, the evidence may not help.",
+      "A reference can still be used even if it prefers another option; true teaching away requires meaningful criticism or discouragement of the approach being claimed."
     ],
     "worked": [
       "Older studies warn that combining two coolant systems destabilizes pressure.",
@@ -244,7 +269,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "Teaching away = real discouragement, not mere silence.",
-      "Nexus ties evidence to the claims."
+      "Nexus ties evidence to the claims.",
+      "Use the actual claimed features and relevant statutory provision to decide; do not answer from the invention's name alone."
     ]
   },
   "14": {
@@ -252,7 +278,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "Written description asks whether the application shows possession of the claimed invention.",
       "Enablement asks whether a skilled person can make and use the full claimed scope without undue experimentation.",
-      "Definiteness under §112(b) separately asks whether claim boundaries are clear enough. These deficiencies should not be confused."
+      "Definiteness under §112(b) separately asks whether claim boundaries are clear enough. These deficiencies should not be confused.",
+      "The two parts of §112 are easy to mix up: §112(a) is about how the invention is disclosed, while §112(b) is about how clearly the claims define what is protected.",
+      "The best mode requirement also appears in §112(a), but its role and consequences differ from ordinary written-description or enablement objections."
     ],
     "worked": [
       "An inventor describes one seal material but claims every high-temperature seal composition.",
@@ -261,7 +289,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "§112(a): description/enablement/best mode.",
-      "§112(b): definiteness."
+      "§112(b): definiteness.",
+      "Use the actual claimed features and relevant statutory provision to decide; do not answer from the invention's name alone."
     ]
   },
   "15": {
@@ -269,7 +298,9 @@ window.PATENT_LESSON_ENRICHMENT={
     "explain": [
       "A provisional application can establish an earlier date for properly disclosed subject matter; it is not itself examined into a patent.",
       "A qualifying nonprovisional is generally filed within twelve months, subject to limited relief provisions.",
-      "An ordinary continuation does not add new matter; a continuation-in-part adds technical disclosure that may receive a later effective filing date."
+      "An ordinary continuation does not add new matter; a continuation-in-part adds technical disclosure that may receive a later effective filing date.",
+      "Written-description support in an earlier filing is a technical question; filing a document within the correct period does not cure disclosure it never contained.",
+      "A continuation-in-part can contain both old and new matter, making effective dates particularly important for the individual claimed inventions."
     ],
     "worked": [
       "A provisional explains a clamp and its mechanical release.",
@@ -278,7 +309,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "Provisional = potential earlier support, not patent grant.",
-      "CIP new matter doesn't automatically inherit the parent's date."
+      "CIP new matter doesn't automatically inherit the parent's date.",
+      "Use the actual claimed features and relevant statutory provision to decide; do not answer from the invention's name alone."
     ]
   },
   "16": {
@@ -334,7 +366,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "Assignment changes rights, not history.",
-      "Inventor, owner, applicant are different concepts."
+      "Inventor, owner, applicant are different concepts.",
+      "Determine what the document or actor actually changes; separate technical inventorship from legal rights."
     ]
   },
   "19": {
@@ -352,7 +385,8 @@ window.PATENT_LESSON_ENRICHMENT={
     ],
     "before": [
       "Transfer and recordation are different.",
-      "Recordation does not determine who invented the claimed features."
+      "Recordation does not determine who invented the claimed features.",
+      "Determine what the document or actor actually changes; separate technical inventorship from legal rights."
     ]
   },
   "20": {
