@@ -1,4 +1,4 @@
-/* Teaching expansion for Foundations Days 1–15. Applied without altering completed lesson IDs. */
+/* Structured instruction for all 30 available daily lessons. */
 window.PATENT_LESSON_ENRICHMENT={
   "1": {
     "rule": "A U.S. utility patent is a limited right to exclude others from making, using, offering to sell, selling, or importing what its claims cover. It is not a general permission to manufacture a product.",
@@ -279,6 +279,290 @@ window.PATENT_LESSON_ENRICHMENT={
     "before": [
       "Provisional = potential earlier support, not patent grant.",
       "CIP new matter doesn't automatically inherit the parent's date."
+    ]
+  },
+  "16": {
+    "rule": "Inventorship depends on a person's inventive contribution to the conception of at least one claimed invention, not on job title or ownership.",
+    "explain": [
+      "Conception means forming a definite idea of the actual inventive subject matter. Building or testing someone else's fully specified design may be important engineering work without making the builder an inventor.",
+      "The claims are critical. A person who thought of a feature that isn't part of any claim may not be an inventor of the currently claimed invention.",
+      "An employer may obtain ownership through assignment or agreement, but a corporate owner is not itself the human inventor. Evaluate the actual contributions of individuals."
+    ],
+    "worked": [
+      "An engineer conceives a locking-pin mechanism and draws the full design.",
+      "A machinist builds that exact design without contributing a new claimed feature.",
+      "The machinist's work is valuable but does not automatically establish inventive conception.",
+      "If the machinist instead originates a feature that appears in a claim, investigate joint inventorship."
+    ],
+    "before": [
+      "Inventorship follows claimed conception.",
+      "Reduction to practice alone need not confer inventorship.",
+      "Company ownership and inventor identity are different."
+    ]
+  },
+  "17": {
+    "rule": "Joint inventors may contribute differently to claimed inventive subject matter; equal contribution and simultaneous work are not required.",
+    "explain": [
+      "The relevant question is who contributed a legally meaningful inventive idea to claimed subject matter.",
+      "Two people can contribute at different times or places and can be joint inventors without both designing every element.",
+      "Routine verification, management or teaching well-known principles is not by itself the same as conceiving an inventive contribution."
+    ],
+    "worked": [
+      "Engineer A conceives a new clamp geometry; Engineer B conceives its novel release mechanism.",
+      "A later claim recites the combined inventive system.",
+      "Investigate whether both contributed to claimed conception, even if A did most of the work.",
+      "The budget manager who signed off on prototypes does not become a joint inventor just by approving funds."
+    ],
+    "before": [
+      "Conception matters more than percentage of effort.",
+      "Joint inventors needn't work together simultaneously.",
+      "Contributing to every claim isn't required."
+    ]
+  },
+  "18": {
+    "rule": "An inventor is a creator; an assignee receives transferred rights; the applicant is the legally authorized party seeking the patent.",
+    "explain": [
+      "An assignment is a legal transfer of ownership rights. The inventor's actual contribution does not change after a transfer.",
+      "The applicant may be an inventor or an entity entitled to pursue the application under applicable rules.",
+      "Ask three separate questions in scenarios: Who conceived the claims? Who presently holds ownership? Who is authorized to prosecute the application?"
+    ],
+    "worked": [
+      "A designer conceives a new manufacturing tool.",
+      "The designer validly assigns rights to a startup.",
+      "The designer remains an inventor; the startup may be owner and may be applicant under proper rules.",
+      "Neither the examiner nor the startup becomes a human inventor merely because they handle the paperwork."
+    ],
+    "before": [
+      "Assignment changes rights, not history.",
+      "Inventor, owner, applicant are different concepts."
+    ]
+  },
+  "19": {
+    "rule": "Executing an assignment and recording that assignment at the USPTO serve different legal and administrative functions.",
+    "explain": [
+      "An executed assignment is an instrument that transfers specified ownership interests, assuming its legal requirements are met.",
+      "Recordation enters the document in USPTO records and may provide public notice and affect priority between certain competing transfers.",
+      "Recordation does not amount to a USPTO judgment that all possible disputes over ownership are settled."
+    ],
+    "worked": [
+      "Inventor A signs a valid agreement assigning rights in a sensor to Startup B.",
+      "Startup B records the assignment with the USPTO.",
+      "The assignment is the transaction; recordation is a record of it.",
+      "The inventor remains the named inventor even though ownership is documented for B."
+    ],
+    "before": [
+      "Transfer and recordation are different.",
+      "Recordation does not determine who invented the claimed features."
+    ]
+  },
+  "20": {
+    "rule": "Representation of others before the USPTO is regulated. A corporation generally needs a registered patent practitioner to prosecute its patent application.",
+    "explain": [
+      "A patent attorney is a licensed attorney with the relevant patent registration; a patent agent is a registered practitioner without needing to be a licensed attorney for authorized patent matters.",
+      "A power of attorney appoints a practitioner to act for the applicant. It does not make the practitioner an inventor or transfer ownership.",
+      "An unregistered engineer can support technical drafting but cannot simply act as the corporation's registered patent representative."
+    ],
+    "worked": [
+      "A corporation owns an invention and hires an experienced unregistered engineer.",
+      "The engineer prepares CAD figures and a technical description.",
+      "For representation in patent prosecution, the company generally uses a registered practitioner.",
+      "A power of attorney may formalize the representative's authority under the applicable rules."
+    ],
+    "before": [
+      "Professional registration ≠ technical expertise.",
+      "Power of attorney ≠ assignment.",
+      "Corporations aren't individual pro se inventors."
+    ]
+  },
+  "21": {
+    "rule": "The oath or declaration identifies and attests to required inventor-related matters; a substitute statement may be allowed in specified circumstances.",
+    "explain": [
+      "An oath/declaration is distinct from technical patent claims, an application data sheet, and a transfer-of-rights assignment.",
+      "A substitute statement may be authorized when an inventor has died, lacks capacity, cannot be found after diligent efforts, or refuses to execute in the qualifying circumstances.",
+      "There are procedural requirements on who signs a substitute statement and what it must contain—do not assume any available employee can sign."
+    ],
+    "worked": [
+      "Two inventors are properly named on a filing.",
+      "One inventor cannot be located after appropriate diligent efforts.",
+      "The applicant checks the rule for a substitute statement rather than inserting the examiner's signature.",
+      "The inventive contribution of the absent inventor still matters to correct inventorship."
+    ],
+    "before": [
+      "Oath relates to inventorship.",
+      "Substitute statement has specific legal conditions.",
+      "Assignment relates to ownership."
+    ]
+  },
+  "22": {
+    "rule": "An application data sheet (ADS) contains structured application information, including certain properly made benefit or priority claims.",
+    "explain": [
+      "An ADS can identify inventors, the applicant, correspondence details and relevant filing relationships.",
+      "A specification is different: it describes the technical invention and provides support for claims. The ADS cannot fill gaps in the technical disclosure.",
+      "Priority and benefit claims sometimes require specific ADS information and timing; the filing team must not assume a verbal note cures a missing formal claim."
+    ],
+    "worked": [
+      "An application lists the inventors and an earlier provisional in its ADS.",
+      "The specification describes a mechanical clamp but lacks the new electronic sensor.",
+      "The ADS may accurately show relationships without establishing written-description support for the sensor.",
+      "Check the technical disclosure and procedural benefit claim independently."
+    ],
+    "before": [
+      "ADS = structured metadata.",
+      "Specification = technical description.",
+      "Benefit requires both formal compliance and substantive support."
+    ]
+  },
+  "23": {
+    "rule": "A nonprovisional patent application combines technical disclosure and administrative formalities; no one document does every job.",
+    "explain": [
+      "Claims define the scope sought. The specification teaches the invention, including how it is made and used under the statutory standards.",
+      "Drawings show parts and relationships when required. The abstract is a concise technical summary and cannot replace the claims.",
+      "An inventor oath and ADS provide different required information. A CAD image without an adequate written explanation can leave disclosure deficiencies."
+    ],
+    "worked": [
+      "A patent package for a pressure valve includes drawings of its housing.",
+      "The claims require a specific seal assembly.",
+      "The specification should adequately describe the assembly and its operation; a sales brochure may not.",
+      "The applicant must separately attend to any required declaration, forms and filing fees."
+    ],
+    "before": [
+      "Claims = boundaries.",
+      "Specification = technical support.",
+      "Abstract = brief overview.",
+      "Forms don't replace disclosure."
+    ]
+  },
+  "24": {
+    "rule": "A filing date, a filing receipt, and completed application formalities are different milestones.",
+    "explain": [
+      "A filing receipt normally reports identifiers and dates recorded by the USPTO for the application.",
+      "Missing-parts notices can require later action on outstanding administrative matters; the effect on filing date depends on the applicable application type and rules.",
+      "A receipt is not a notice of allowance or proof that the claims are patentable."
+    ],
+    "worked": [
+      "An electronic application is accorded a filing date.",
+      "The USPTO later identifies a missing declaration or fee.",
+      "The applicant responds to the missing-parts notice under the applicable deadline and rules.",
+      "Do not assert that every missing item necessarily voids the originally accorded filing date."
+    ],
+    "before": [
+      "Filing date ≠ issue date.",
+      "Filing receipt ≠ patent grant.",
+      "Formalities still matter."
+    ]
+  },
+  "25": {
+    "rule": "USPTO fees have distinct purposes and some legally eligible applicants may qualify for small-entity or micro-entity rates.",
+    "explain": [
+      "Application filing, search and examination fees occur in different contexts from an issue fee after allowance or maintenance fees after grant.",
+      "Small-entity and micro-entity status have regulatory definitions and conditions involving more than simply business age.",
+      "Payment ensures compliance with a fee requirement but does not by itself establish novelty, obviousness, or disclosure."
+    ],
+    "worked": [
+      "A young hardware company plans a patent application.",
+      "It checks whether it actually satisfies small-entity or micro-entity definitions.",
+      "It pays the correct application-related charges and later, if claims are allowed, addresses the issue fee.",
+      "None of those payments proves the actuator is novel."
+    ],
+    "before": [
+      "Fee timing and purpose matter.",
+      "Entity status is legally defined.",
+      "Fee payment isn't substantive examination."
+    ]
+  },
+  "26": {
+    "rule": "A later nonprovisional may claim benefit of an earlier provisional within the usual twelve-month window, but only for subject matter sufficiently disclosed earlier.",
+    "explain": [
+      "A provisional is a potential earlier filing foundation, not an examined application that will mature into a patent on its own.",
+      "A later nonprovisional ordinarily must be filed within twelve months to obtain benefit under §119(e), subject to certain exceptions and procedural requirements.",
+      "The earlier disclosure must support the later claimed invention. Newly added features aren't automatically entitled to the provisional date."
+    ],
+    "worked": [
+      "A March provisional illustrates a spring-loaded mechanical clamp.",
+      "A November nonprovisional includes an electronic sensor invented after March.",
+      "Check whether the March provisional actually described each feature of the later claim.",
+      "The existence of the March filing does not automatically support the sensor."
+    ],
+    "before": [
+      "Twelve months is the ordinary benefit window.",
+      "Actual earlier technical support matters.",
+      "Provisional ≠ patent grant."
+    ]
+  },
+  "27": {
+    "rule": "A first qualifying foreign application may support priority in a later U.S. application under 35 U.S.C. § 119, subject to timing and procedural requirements.",
+    "explain": [
+      "The Paris Convention establishes priority concepts; for many utility inventions, the general time limit is twelve months from the first qualifying foreign application.",
+      "A priority claim needs the appropriate procedural steps, and an earlier filing supports only subject matter it actually disclosed.",
+      "A foreign application does not create an enforceable U.S. patent automatically; U.S. filing and examination remain necessary."
+    ],
+    "worked": [
+      "A German engineer files a first patent application for a gearbox in February.",
+      "They pursue a U.S. application the next January with the proper priority claim.",
+      "They check the filing interval and whether each claimed gearbox feature appeared in the German document.",
+      "A newly added sensor absent from the German filing has no automatic earlier support."
+    ],
+    "before": [
+      "Foreign priority is not a world patent.",
+      "Time and documentation matter.",
+      "Earlier filing must support the claim."
+    ]
+  },
+  "28": {
+    "rule": "A continuation pursues claims supported by an earlier disclosure; a divisional pursues distinct disclosed invention subject matter, often after restriction.",
+    "explain": [
+      "Continuations generally repeat an earlier specification without adding new technical matter. They may pursue different claims to already disclosed subject matter.",
+      "A divisional may follow a restriction between separately claimed inventions in an earlier filing.",
+      "Continuation benefit also depends on proper timing, co-pendency and other statutory requirements; simply using a familiar label is insufficient."
+    ],
+    "worked": [
+      "An application describes a housing and a manufacturing fixture.",
+      "The examiner requires election between distinct inventions.",
+      "The applicant pursues one in the initial application and may file a divisional for the other disclosed invention.",
+      "A normal continuation of the parent cannot quietly add an entirely new fixture never disclosed before."
+    ],
+    "before": [
+      "Continuation = no new matter.",
+      "Divisional = separately pursued disclosed invention.",
+      "Co-pendency can affect benefit."
+    ]
+  },
+  "29": {
+    "rule": "A continuation-in-part (CIP) adds disclosure, but later-added subject matter cannot simply borrow the earlier filing date.",
+    "explain": [
+      "A CIP incorporates earlier material and adds new technical information. New matter is exactly what a regular continuation generally cannot add.",
+      "An earlier date may be available to properly supported claims, but subject matter first disclosed later gets that later date for relevant analysis.",
+      "Always compare the actual claimed features with the original parent disclosure; priority questions can vary by claim."
+    ],
+    "worked": [
+      "A parent application describes a simple valve in 2025.",
+      "A 2026 CIP adds a computerized control loop.",
+      "A claim to the originally disclosed valve might qualify for an earlier date under proper rules.",
+      "A claim requiring the new control loop cannot assume the 2025 date if the loop wasn't described then."
+    ],
+    "before": [
+      "CIP adds new disclosure.",
+      "Claims get dates supported by actual content.",
+      "Not every claim automatically receives the oldest date."
+    ]
+  },
+  "30": {
+    "rule": "A comprehensive filing analysis separates inventive contribution, transferred ownership, application formalities and technical support for benefit.",
+    "explain": [
+      "Begin with the actual claims and identify which humans conceived the claimed subject matter.",
+      "Check whether rights were transferred and distinguish ownership from inventorship. Confirm the administrative filing records separately.",
+      "Evaluate whether the original specification enables and describes each feature, then verify that any earlier-date benefit has both formal and substantive support."
+    ],
+    "worked": [
+      "A company files a provisional about a clamp.",
+      "Two engineers later invent a new electronic release system and sign assignments to the company.",
+      "Determine which engineers contributed to the claimed release system, who owns rights, and which documents identify each party.",
+      "Finally, compare the claim to the earlier provisional to see which features might qualify for that date."
+    ],
+    "before": [
+      "Inventors ≠ owners.",
+      "ADS ≠ technical specification.",
+      "Earlier filing ≠ automatic support for new matter."
     ]
   }
 };
