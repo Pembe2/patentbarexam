@@ -53,7 +53,7 @@ function goDaily(){showView('daily');window.scrollTo(0,0)}
 function renderBanner(){
  const d=stored(),l=current(),complete=doneCount(),finishedToday=d.lastCompletedDate===localDay();
  if(!l){
-  banner.innerHTML='<div class="daily-banner-head"><strong>🎓 Foundations completed!</strong><span>15 of 15 lessons</span></div><p>You finished the introductory path. You can review any lesson below.</p><button type="button" class="btn" id="dailyGo">Review lessons →</button>';
+  banner.innerHTML='<div class="daily-banner-head"><strong>🎓 Foundations completed!</strong><span>'+lessons.length+' of '+lessons.length+' lessons</span></div><p>You finished the introductory path. You can review any lesson below.</p><button type="button" class="btn" id="dailyGo">Review lessons →</button>';
  }else{
   banner.innerHTML='<div class="daily-banner-head"><strong>☀ '+(finishedToday?'Today’s lesson complete':'Today’s 10-minute lesson')+'</strong><span>Lesson '+l.day+' / '+lessons.length+'</span></div>'+
   '<h2>'+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><div class="daily-banner-actions"><span class="small">≈ 10 minutes · explanations + 3 questions</span><button class="btn" id="dailyGo">'+(finishedToday?'Keep learning →':'Start today’s lesson →')+'</button>'+
@@ -67,14 +67,26 @@ function heading(l,subtitle){
  return '<div class="daily-title"><div class="eyebrow">Lesson '+l.day+' of '+lessons.length+' · '+safe(l.tag)+'</div><h2>'+safe(l.title)+'</h2><p class="small muted">'+safe(subtitle)+'</p></div>';
 }
 function renderIndex(){
+ const roadmap=(window.PATENT_LESSON_ROADMAP||[]).filter(x=>x.day>lessons.length);
+
  const app=document.getElementById('dailyApp'),d=stored(),l=current();
  const pct=Math.round(doneCount()/lessons.length*100);
  app.innerHTML='<div class="card daily-start"><div class="flex" style="justify-content:space-between"><strong>Your foundation course</strong><span class="pill">'+doneCount()+' / '+lessons.length+' completed</span></div>'+
  '<div class="bar"><div style="width:'+pct+'%"></div></div>'+
- (l?'<h2 style="margin-top:18px">Up next: '+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><p class="small muted">≈ 10 minutes. Read, see a practical example, answer three questions and recap.</p><button class="btn" id="dailyStart">Start lesson '+l.day+' →</button>':'<h2 style="margin-top:18px">All 15 lessons completed!</h2><p>Review any lesson below. Your completed lessons remain available.</p>')+'</div>'+
+ (l?'<h2 style="margin-top:18px">Up next: '+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><p class="small muted">≈ 10 minutes. Read, see a practical example, answer three questions and recap.</p><button class="btn" id="dailyStart">Start lesson '+l.day+' →</button>':'<h2 style="margin-top:18px">All '+lessons.length+' available lessons completed!</h2><p>Review any lesson below. Your completed lessons remain available.</p>')+'</div>'+
  '<h3 style="margin:23px 0 12px">Your lessons</h3><div class="daily-lesson-list">'+lessons.map(x=>'<button type="button" class="daily-list-item '+(d.completed[x.id]?'complete':'')+'" '+(!d.completed[x.id]&&l&&x.day>l.day?'disabled aria-label="Locked — complete earlier lessons first"':'')+' data-daily-id="'+safe(x.id)+'"><span class="daily-list-number">'+(d.completed[x.id]?'✓':x.day)+'</span><span><strong>'+safe(x.title)+'</strong><small>'+safe(x.tag)+'</small></span><span class="muted">›</span></button>').join('')+'</div>';
  if(l)app.querySelector('#dailyStart').addEventListener('click',()=>start(l.id));
  app.querySelectorAll('[data-daily-id]:not(:disabled)').forEach(x=>x.addEventListener('click',()=>start(x.dataset.dailyId)));
+ if(roadmap.length){
+  const future=document.createElement('details');
+  future.className='daily-future-roadmap';
+  future.innerHTML='<summary>Preview the remaining '+roadmap.length+' planned lessons (Days '+roadmap[0].day+'–'+roadmap[roadmap.length-1].day+')</summary>'+
+   '<p class="small muted">These lessons are outlined, not yet available for study. Their topics, vocabulary, and MPEP mappings are planned; content and questions will be developed in later batches.</p>'+
+   '<div class="daily-lesson-list">'+roadmap.map(x=>
+     '<div class="daily-list-item daily-planned-item"><span class="daily-list-number">'+x.day+'</span><span><strong>'+safe(x.title)+'</strong><small>'+safe(x.objective)+'</small></span><span class="daily-plan-pill">Planned</span></div>'
+   ).join('')+'</div>';
+  app.append(future);
+ }
  const unlocked=lessons.filter(x=>d.completed[x.id]||(l&&x.id===l.id));
  const words=unlocked.flatMap(x=>x.vocabulary||[]);
  if(words.length){
