@@ -55,8 +55,8 @@ function renderBanner(){
  if(!l){
   banner.innerHTML='<div class="daily-banner-head"><strong>🎓 Foundations completed!</strong><span>'+lessons.length+' of '+lessons.length+' lessons</span></div><p>You finished the introductory path. You can review any lesson below.</p><button type="button" class="btn" id="dailyGo">Review lessons →</button>';
  }else{
-  banner.innerHTML='<div class="daily-banner-head"><strong>☀ '+(finishedToday?'Today’s lesson complete':'Today’s 10-minute lesson')+'</strong><span>Lesson '+l.day+' / '+lessons.length+'</span></div>'+
-  '<h2>'+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><div class="daily-banner-actions"><span class="small">≈ 10 minutes · explanations + 3 questions</span><button class="btn" id="dailyGo">'+(finishedToday?'Keep learning →':'Start today’s lesson →')+'</button>'+
+  banner.innerHTML='<div class="daily-banner-head"><strong>☀ '+(finishedToday?'Today’s lesson complete':'Today’s guided lesson')+'</strong><span>Lesson '+l.day+' / '+lessons.length+'</span></div>'+
+  '<h2>'+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><div class="daily-banner-actions"><span class="small">≈ 10–15 minutes · guided teaching + 3 questions</span><button class="btn" id="dailyGo">'+(finishedToday?'Keep learning →':'Start today’s lesson →')+'</button>'+
   (!finishedToday&&d.dismissedDate!==localDay()?'<button class="btn ghost" id="dailyLater">Maybe later</button>':'')+'</div>';
   if(d.dismissedDate===localDay()&&!finishedToday)banner.classList.add('daily-dismissed');else banner.classList.remove('daily-dismissed');
  }
@@ -90,7 +90,7 @@ function renderIndex(){
  const pct=Math.round(doneCount()/lessons.length*100);
  app.innerHTML='<div class="card daily-start"><div class="flex" style="justify-content:space-between"><strong>Your foundation course</strong><span class="pill">'+doneCount()+' / '+lessons.length+' completed</span></div>'+
  '<div class="bar"><div style="width:'+pct+'%"></div></div>'+
- (l?'<h2 style="margin-top:18px">Up next: '+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><p class="small muted">≈ 10 minutes. Learn the vocabulary and legal rule, work through an engineering example, then answer three questions.</p><button class="btn" id="dailyStart">Start lesson '+l.day+' →</button>':'<h2 style="margin-top:18px">All '+lessons.length+' available lessons completed!</h2><p>Review any lesson below. Your completed lessons remain available.</p>')+'</div>'+
+ (l?'<h2 style="margin-top:18px">Up next: '+safe(l.title)+'</h2><p>'+safe(l.definition)+'</p><p class="small muted">≈ 10–15 minutes. Learn the vocabulary and legal rule, work through an engineering example, then answer three questions.</p><button class="btn" id="dailyStart">Start lesson '+l.day+' →</button>':'<h2 style="margin-top:18px">All '+lessons.length+' available lessons completed!</h2><p>Review any lesson below. Your completed lessons remain available.</p>')+'</div>'+
  '<h3 style="margin:23px 0 12px">Your lessons</h3><div class="daily-lesson-list">'+lessons.map(x=>'<button type="button" class="daily-list-item '+(d.completed[x.id]?'complete':'')+'" '+(!d.completed[x.id]&&l&&x.day>l.day?'disabled aria-label="Locked — complete earlier lessons first"':'')+' data-daily-id="'+safe(x.id)+'"><span class="daily-list-number">'+(d.completed[x.id]?'✓':x.day)+'</span><span><strong>'+safe(x.title)+'</strong><small>'+safe(x.tag)+'</small></span><span class="muted">›</span></button>').join('')+'</div>';
  if(l)app.querySelector('#dailyStart').addEventListener('click',()=>start(l.id));
  app.querySelectorAll('[data-daily-id]:not(:disabled)').forEach(x=>x.addEventListener('click',()=>start(x.dataset.dailyId)));
@@ -202,7 +202,7 @@ function showDailyPrompt(){
  modal.setAttribute('role','presentation');
  modal.innerHTML='<div class="daily-modal" role="dialog" aria-modal="true" aria-labelledby="dailyModalTitle" aria-describedby="dailyModalDesc">'+
  '<div class="daily-modal-eyebrow">☀ Your daily patent bar lesson</div>'+
- '<h2 id="dailyModalTitle">Ready for 10 minutes of learning?</h2>'+
+ '<h2 id="dailyModalTitle">Ready for a short guided lesson?</h2>'+
  '<p id="dailyModalDesc">Lesson '+next.day+' of '+lessons.length+': <strong>'+safe(next.title)+'</strong></p>'+
  '<p class="daily-modal-summary">'+safe(next.definition)+'</p>'+
  '<div class="daily-modal-actions"><button type="button" id="dailyModalStart" class="btn">Start today’s lesson →</button><button type="button" id="dailyModalLater" class="btn ghost">Maybe later</button></div>'+
